@@ -28,20 +28,26 @@ public enum Directions { None = 0, Up = 1, Down = 2, Left = 4, Right = 8 }
 // Used to keep track of Rarity.
 public enum Rarity { Common, Uncommon, Rare, Mythic }
 
+
 // Main Script
 public class DatabaseController : MonoBehaviour {
 	// All of the cards parsed from the CSV
 	List<Card> AllCards = new List<Card>();
 	
-	// --- Start --- //
-	void Start () {
+	// Container for all of the cards.
+	[SerializeField] GameObject CardContainer;
 
-	}
-	
-	// --- Update --- //
-	void Update () {
-		
-	}
+	// A prefab to use for creating the cards of.
+	[SerializeField] GameObject CardPrefab;
+
+	// The number of rows and columns the cards should be in.
+	const int NUM_ROWS = 7;
+	const int NUM_COLUMNS = 10;
+
+	// The width and height of the card, in pixles.
+	const int CARD_WIDTH = 400;
+	const int CARD_HEIGHT = 400;
+
 
 
 	// --- Button Callbacks --- //
@@ -114,6 +120,52 @@ public class DatabaseController : MonoBehaviour {
 			Debug.LogWarning("No Cards in internal cards list! Please click \"Parse CSV / Populate List\" first!");
 			return;
 		}
-
+		
+		// Create a prefab for each card using the card prefab template.
+		for(int i = 0; i < AllCards.Count; i++) {
+			Card card = AllCards[i];
+			CardInfo cardScript = Instantiate(CardPrefab, CardContainer.transform).GetComponent<CardInfo>();
+			cardScript.gameObject.name = card.CardName;
+			// Set position
+			RectTransform rectTrans = ((RectTransform)cardScript.gameObject.transform);
+			rectTrans.anchoredPosition = new Vector2(rectTrans.anchoredPosition.x + CARD_WIDTH * (i % 10), rectTrans.anchoredPosition.y + CARD_HEIGHT * (i / 10));
+			// Set fields
+			cardScript.CardName.text = card.CardName;
+			cardScript.CardText.text = card.CardText;
+			cardScript.ManaCostText.text = card.ManaCost.ToString();
+			// Attack/Health
+			if(card.Attack != -1) {
+				cardScript.AttackText.text = card.Attack.ToString();
+			} else {
+				cardScript.AttackText.text = string.Empty;
+				cardScript.AttackIcon.sprite = null;
+			}
+			if(card.Health != -1) {
+				cardScript.HealthText.text = card.Health.ToString();
+			} else {
+				cardScript.HealthText.text = string.Empty;
+				cardScript.HealthIcon.sprite = null;
+			}
+			// Directions
+			if(card.Directions.HasFlag(Directions.None)) {
+				cardScript.UpArrow.enabled = false;
+				cardScript.DownArrow.enabled = false;
+				cardScript.LeftArrow.enabled = false;
+				cardScript.RightArrow.enabled = false;
+			} else {
+				if(card.Directions.HasFlag(Directions.Up)) {
+					cardScript.UpArrow.enabled = true;
+				}
+				if(card.Directions.HasFlag(Directions.Down)) {
+					cardScript.DownArrow.enabled = true;
+				}
+				if(card.Directions.HasFlag(Directions.Left)) {
+					cardScript.LeftArrow.enabled = true;
+				}
+				if(card.Directions.HasFlag(Directions.Right)) {
+					cardScript.RightArrow.enabled = true;
+				}
+			}
+		}
 	}
 }

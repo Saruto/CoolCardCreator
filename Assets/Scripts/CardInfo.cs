@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CardTemplate : MonoBehaviour {
+public class CardInfo : MonoBehaviour {
 
 	// References to the various GOs on the template.
 	public Image Background;
