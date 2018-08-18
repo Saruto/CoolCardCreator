@@ -128,7 +128,7 @@ public class DatabaseController : MonoBehaviour {
 	public void OnSaveDeck() {
 		string PATH = Application.persistentDataPath + "/Deck - " + DateTime.Now.ToString("MM-dd-yyyy-HH-mm-ss") + ".png";
 		// Create texture from the DeckRendererCamera's target texture.
-		Texture2D texture = new Texture2D(4000, 2800, TextureFormat.RGB24, false);
+		Texture2D texture = new Texture2D(4000, 2800, TextureFormat.ARGB32, false);
 		RenderTexture.active = DeckRendererCamera.targetTexture;
 		texture.ReadPixels(new Rect(0, 0, 4000, 2800), 0, 0);
 		texture.Apply();
