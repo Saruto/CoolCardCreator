@@ -31,26 +31,27 @@ public enum Rarity { Common, Uncommon, Rare, Mythic }
 
 // Main Script
 public class DatabaseController : MonoBehaviour {
+	// ----------------------------------------- Fields and Properties ----------------------------------------- //
 	// All of the cards parsed from the CSV
 	List<Card> AllCards = new List<Card>();
 	
+
+	// The canvas used for rendering the decks.
+	[SerializeField] GameObject DeckRendererCanvas;
+
+	// The camera that's currently rendering the deck.
+	[SerializeField] Camera DeckRendererCamera;
+
 	// Container for all of the cards.
-	[SerializeField] GameObject CardContainer;
+	[SerializeField] GameObject CardContainerPrefab;
 
 	// A prefab to use for creating the cards of.
 	[SerializeField] GameObject CardPrefab;
 
-	// The number of rows and columns the cards should be in.
-	const int NUM_ROWS = 7;
-	const int NUM_COLUMNS = 10;
 
-	// The width and height of the card, in pixles.
-	const int CARD_WIDTH = 400;
-	const int CARD_HEIGHT = 400;
-
-
-
-	// --- Button Callbacks --- //
+	// ----------------------------------------- Methods ----------------------------------------- //
+	// ----------- Button Callbacks ----------- //
+	// Parses entire CSV and adds it to the AllCards list.
 	public void OnParseCSV() {
 		// Clear the list.
 		AllCards.Clear();
@@ -115,20 +116,47 @@ public class DatabaseController : MonoBehaviour {
 		print("All cards successfully parsed! Number of Cards: " + AllCards.Count);
 	}
 
+
+	// Simply makes a deck with every single card in the database represented once.
 	public void OnMakeAllCards() {
-		if(AllCards.Count == 0) {
-			Debug.LogWarning("No Cards in internal cards list! Please click \"Parse CSV / Populate List\" first!");
+		MakeDeck(AllCards, "All Cards");
+		print("Created all card gameobjects!");
+	}
+
+	
+	// Saves the deck that is currently being rendered by the DeckRendererCamera.
+	public void OnSaveDeck() {
+		string PATH = Application.persistentDataPath + "/Deck - " + DateTime.Now.ToString("MM-dd-yyyy-HH-mm-ss") + ".png";
+		// Create texture from the DeckRendererCamera's target texture.
+		Texture2D texture = new Texture2D(4000, 2800, TextureFormat.RGB24, false);
+		RenderTexture.active = DeckRendererCamera.targetTexture;
+		texture.ReadPixels(new Rect(0, 0, 4000, 2800), 0, 0);
+		texture.Apply();
+		RenderTexture.active = null;
+		// Encode texture to png and save it.
+		byte[] bytes = texture.EncodeToPNG();
+		System.IO.File.WriteAllBytes(PATH, bytes);
+		print("Deck image creation successful! Saved to: " + PATH);
+	}
+
+	
+	// ----------- Helper Functions ----------- //
+	// Creates a gameobject with several card prefab objects as children, with each card in the given cards list inside of it.
+	void MakeDeck(List<Card> deck, string deckName) {
+		if(deck.Count == 0) {
+			Debug.LogWarning("No Cards in the deck list!");
 			return;
 		}
+
+		// Create parent, rename parent so it has the date.
+		GameObject CardContainer = Instantiate(CardContainerPrefab, DeckRendererCanvas.transform);
+		CardContainer.name = deckName + " - " + DateTime.Now;
 		
 		// Create a prefab for each card using the card prefab template.
-		for(int i = 0; i < AllCards.Count; i++) {
-			Card card = AllCards[i];
+		for(int i = 0; i < deck.Count; i++) {
+			Card card = deck[i];
 			CardInfo cardScript = Instantiate(CardPrefab, CardContainer.transform).GetComponent<CardInfo>();
 			cardScript.gameObject.name = card.CardName;
-			// Set position
-			RectTransform rectTrans = ((RectTransform)cardScript.gameObject.transform);
-			rectTrans.anchoredPosition = new Vector2(rectTrans.anchoredPosition.x + CARD_WIDTH * (i % 10), rectTrans.anchoredPosition.y + CARD_HEIGHT * (i / 10));
 			// Set fields
 			cardScript.CardName.text = card.CardName;
 			cardScript.CardText.text = card.CardText;
@@ -168,4 +196,8 @@ public class DatabaseController : MonoBehaviour {
 			}
 		}
 	}
+
+
+
+
 }
