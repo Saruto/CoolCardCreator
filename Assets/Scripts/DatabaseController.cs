@@ -50,6 +50,11 @@ public class DatabaseController : MonoBehaviour {
 
 
 	// ----------------------------------------- Methods ----------------------------------------- //
+	// --- Start --- //
+	void Start() {
+		OnParseCSV();
+	}
+
 	// ----------- Button Callbacks ----------- //
 	// Parses entire CSV and adds it to the AllCards list.
 	public void OnParseCSV() {
