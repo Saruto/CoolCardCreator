@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Script attached to all card gameobjects that define all of its info fields.
 public class CardInfo : MonoBehaviour {
-
 	// References to the various GOs on the template.
 	public Image Background;
 	public Image ManaCostIcon;

@@ -1,9 +1,11 @@
 using System;
+using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 // Represents a single row of card information from the CSV
@@ -35,6 +37,10 @@ public class DatabaseController : MonoBehaviour {
 	// All of the cards parsed from the CSV
 	List<Card> AllCards = new List<Card>();
 	
+	
+	// The newline character this system uses.
+	readonly static string NewlineCharacter = Environment.NewLine;
+
 
 	// The canvas used for rendering the decks.
 	[SerializeField] GameObject DeckRendererCanvas;
@@ -47,6 +53,10 @@ public class DatabaseController : MonoBehaviour {
 
 	// A prefab to use for creating the cards of.
 	[SerializeField] GameObject CardPrefab;
+
+	// The decklist text input field and the deck's name.
+	[SerializeField] Text DeckName;
+	[SerializeField] Text DeckList;
 
 
 	// ----------------------------------------- Methods ----------------------------------------- //
@@ -62,7 +72,6 @@ public class DatabaseController : MonoBehaviour {
 		AllCards.Clear();
 
 		// Get CSV, strip the first row.
-		string NewlineCharacter = Environment.NewLine;
 		TextAsset csv = (TextAsset)Resources.Load("Card Database");
 		string csvText = csv.text.Substring(csv.text.IndexOf(NewlineCharacter) + NewlineCharacter.Length);
 
@@ -121,6 +130,31 @@ public class DatabaseController : MonoBehaviour {
 		print("All cards successfully parsed! Number of Cards: " + AllCards.Count);
 	}
 
+	
+	// Makes a deck based on the input in the Deck List text component.
+	public void OnMakeDeckFromDeckList() {
+		List<Card> cards = new List<Card>();
+		string deckList = DeckList.text;
+		// Split list into rows.
+		string[] rows = deckList.Split(new string[]{ "\n" }, StringSplitOptions.RemoveEmptyEntries);
+		// Split each row into number/cardname pairs
+		foreach(string row in rows) {
+			string[] numberCardNamePair = row.Split(new char[]{ ' ' }, 2);
+			int number = Convert.ToInt32(numberCardNamePair[0]);
+			// Search the AllCards list for the card name
+			Card card = AllCards.Find((c) => c.CardName == numberCardNamePair[1]);
+			if(card.CardName != numberCardNamePair[1]) {
+				Debug.LogWarning("Card not found in the Card Database! Card Name: " + numberCardNamePair[1]);
+			}
+			// Add to deck.
+			for(int i = 0; i < number; i++) {
+				cards.Add(card);
+			}
+		}
+		// Make the deck.
+		MakeDeck(cards, DeckName.text);
+	}
+
 
 	// Simply makes a deck with every single card in the database represented once.
 	public void OnMakeAllCards() {
@@ -131,7 +165,18 @@ public class DatabaseController : MonoBehaviour {
 	
 	// Saves the deck that is currently being rendered by the DeckRendererCamera.
 	public void OnSaveDeck() {
-		string PATH = Application.persistentDataPath + "/Deck - " + DateTime.Now.ToString("MM-dd-yyyy-HH-mm-ss") + ".png";
+		// Get name of deck, stripping out illegal characters.
+		string deckName = null;
+		foreach(Transform child in DeckRendererCanvas.transform) {
+			string pattern = new string(Path.GetInvalidFileNameChars()) + new string(Path.GetInvalidPathChars());
+			Regex regex = new Regex(string.Format("[{0}]", Regex.Escape(pattern)));		
+			deckName = regex.Replace(child.name, "");	 
+		}
+		if(deckName == null) {
+			Debug.LogWarning("No deck in the renderer canvas! Please press one of the Deck Creation options first!");
+			return;
+		}
+		string PATH = Application.persistentDataPath + "/" + deckName + " - " + DateTime.Now.ToString("MM-dd-yyyy-HH-mm-ss") + ".png";
 		// Create texture from the DeckRendererCamera's target texture.
 		Texture2D texture = new Texture2D(4000, 2800, TextureFormat.ARGB32, false);
 		RenderTexture.active = DeckRendererCamera.targetTexture;
@@ -151,6 +196,11 @@ public class DatabaseController : MonoBehaviour {
 		if(deck.Count == 0) {
 			Debug.LogWarning("No Cards in the deck list!");
 			return;
+		}
+
+		// Delete all children under the deck renderer canvas.
+		foreach(Transform child in DeckRendererCanvas.transform) {
+			Destroy(child.gameObject);
 		}
 
 		// Create parent, rename parent so it has the date.
