@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class CardInfo : MonoBehaviour {
 	// References to the various GOs on the template.
 	public Image Background;
-	public Image ManaCostIcon;
 	public Image UpArrow;
 	public Image DownArrow;
 	public Image LeftArrow;
@@ -17,9 +16,8 @@ public class CardInfo : MonoBehaviour {
 
 	public Text CardName;
 	public Text CardText;
-	public Text ManaCostText;
 	public Text AttackText;
 	public Text HealthText;
 
-
+	public GameObject ManaCostLayout;
 }

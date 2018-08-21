@@ -12,7 +12,7 @@ using UnityEngine.UI;
 public struct Card {
 	public int ID;
 	public string CardName;
-	public int ManaCost;
+	public string ManaCost;
 	public string Type;
 	public string CardText;
 	public int Attack;
@@ -54,6 +54,17 @@ public class DatabaseController : MonoBehaviour {
 	// A prefab to use for creating the cards of.
 	[SerializeField] GameObject CardPrefab;
 
+	// Prefab for a mana symbol
+	[SerializeField] GameObject ManaSymbolPrefab;
+
+	// Prefabs for every mana symbol sprite
+	[SerializeField] Sprite PurpleSymbol;
+	[SerializeField] Sprite RedSymbol;
+	[SerializeField] Sprite GraySymbol;
+	[SerializeField] Sprite GreenSymbol;
+	[SerializeField] Sprite YellowSymbol;
+	[SerializeField] Sprite NeutralSymbol;
+
 	// The decklist text input field and the deck's name.
 	[SerializeField] Text DeckName;
 	[SerializeField] Text DeckList;
@@ -65,6 +76,10 @@ public class DatabaseController : MonoBehaviour {
 
 	// Various Sprites
 	[SerializeField] Sprite TransparentSprite;
+
+
+	// The order of the columns in the CSV parser.
+	enum CSVColumns { ID, CardName, ManaCost, LandType, Type, CardText, Attack, Health, Directions, Rarity };
 
 
 	// ----------------------------------------- Methods ----------------------------------------- //
@@ -98,25 +113,25 @@ public class DatabaseController : MonoBehaviour {
 
 			// Assign variables.
 			Card card = new Card();
-			card.ID = Convert.ToInt32(elements[0]);
-			card.CardName = elements[1];
-			card.ManaCost = Convert.ToInt32(elements[2]);
-			card.Type = elements[3];
-			card.CardText = elements[4];
-			if(elements[5] != "") {
-				card.Attack = Convert.ToInt32(elements[5]);
+			card.ID = Convert.ToInt32(elements[(int)CSVColumns.ID]);
+			card.CardName = elements[(int)CSVColumns.CardName];
+			card.ManaCost = elements[(int)CSVColumns.ManaCost];
+			card.Type = elements[(int)CSVColumns.Type];
+			card.CardText = elements[(int)CSVColumns.CardText];
+			if(elements[(int)CSVColumns.Attack] != "") {
+				card.Attack = Convert.ToInt32(elements[(int)CSVColumns.Attack]);
 			} else {
 				card.Attack = -1;
 			}
-			if(elements[6] != "") {
-				card.Health = Convert.ToInt32(elements[6]);
+			if(elements[(int)CSVColumns.Health] != "") {
+				card.Health = Convert.ToInt32(elements[(int)CSVColumns.Health]);
 			} else {
 				card.Health = -1;
 			}
-			Enum.TryParse(elements[8], out card.Rarity);
+			Enum.TryParse(elements[(int)CSVColumns.Rarity], out card.Rarity);
 			
 			// Parse Directions
-			string[] csvDirections = elements[7].Split('/');
+			string[] csvDirections = elements[(int)CSVColumns.Directions].Split('/');
 			Directions directions = Directions.None;
 			foreach(string dir in csvDirections) {
 				switch(dir) {
@@ -238,7 +253,22 @@ public class DatabaseController : MonoBehaviour {
 			cardScript.Background.color = DeckColorOptions[CurrentlySelectedColor].color;
 			cardScript.CardName.text = card.CardName;
 			cardScript.CardText.text = card.CardText;
-			cardScript.ManaCostText.text = card.ManaCost.ToString();
+			// Mana
+			IEnumerable<char> manaSymbols = card.ManaCost.ToCharArray().Reverse();
+			foreach(char symbol in manaSymbols) {
+				GameObject symbolIcon = Instantiate(ManaSymbolPrefab, cardScript.ManaCostLayout.transform);
+				switch(symbol) {
+				case 'P': symbolIcon.GetComponent<Image>().sprite = PurpleSymbol; break;
+				case 'R': symbolIcon.GetComponent<Image>().sprite = RedSymbol; break;
+				case 'A': symbolIcon.GetComponent<Image>().sprite = GraySymbol; break;
+				case 'G': symbolIcon.GetComponent<Image>().sprite = GreenSymbol; break;
+				case 'Y': symbolIcon.GetComponent<Image>().sprite = YellowSymbol; break;
+				default: 
+					symbolIcon.GetComponent<Image>().sprite = NeutralSymbol;
+					symbolIcon.GetComponentInChildren<Text>().text = symbol.ToString();
+					break;
+				}
+			}
 			// Attack/Health
 			if(card.Attack != -1) {
 				cardScript.AttackText.text = card.Attack.ToString();

@@ -2207,6 +2207,14 @@ MonoBehaviour:
   CardContainerPrefab: {fileID: 1499222121904230, guid: 8818aa48651d4334cbc3586e4c710524,
     type: 2}
   CardPrefab: {fileID: 1224819131253906, guid: b13c75c2448b31345a3e2dd858216dd9, type: 2}
+  ManaSymbolPrefab: {fileID: 1467112865960074, guid: 8acf6a0279bf3904f9967f6fc27a49ac,
+    type: 2}
+  PurpleSymbol: {fileID: 21300000, guid: 0c4f09e22f256334fa75c2861c5b6b2c, type: 3}
+  RedSymbol: {fileID: 21300000, guid: 9b6a397e59419ac44af16b52caf7b768, type: 3}
+  GraySymbol: {fileID: 21300000, guid: 57c9b0d0a08895348ad64ba1a2b72448, type: 3}
+  GreenSymbol: {fileID: 21300000, guid: e817705e9c22db143aa4915ea9eb3207, type: 3}
+  YellowSymbol: {fileID: 21300000, guid: 86257fedb3a829a46ae42cda13731b06, type: 3}
+  NeutralSymbol: {fileID: 21300000, guid: 59f202fe5d83b5d4d8e8f8e7dbeb0ad6, type: 3}
   DeckName: {fileID: 1664132088}
   DeckList: {fileID: 1655506046}
   DeckColorOptions:
