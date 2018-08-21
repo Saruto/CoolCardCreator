@@ -58,11 +58,20 @@ public class DatabaseController : MonoBehaviour {
 	[SerializeField] Text DeckName;
 	[SerializeField] Text DeckList;
 
+	// The deck color picker options and the current color selected.
+	[SerializeField] Image[] DeckColorOptions;
+	int CurrentlySelectedColor = -1;
+
+
+	// Various Sprites
+	[SerializeField] Sprite TransparentSprite;
+
 
 	// ----------------------------------------- Methods ----------------------------------------- //
 	// --- Start --- //
 	void Start() {
 		OnParseCSV();
+		OnDeckColorPress(0);
 	}
 
 	// ----------- Button Callbacks ----------- //
@@ -189,6 +198,19 @@ public class DatabaseController : MonoBehaviour {
 		print("Deck image creation successful! Saved to: " + PATH);
 	}
 
+
+	// Callback for the deck color buttons
+	public void OnDeckColorPress(int index) {
+		CurrentlySelectedColor = index;
+		for(int i = 0; i < DeckColorOptions.Length; i++) {
+			if(CurrentlySelectedColor == i) {
+				DeckColorOptions[i].GetComponentInChildren<CanvasGroup>().alpha = 1f;
+			} else {
+				DeckColorOptions[i].GetComponentInChildren<CanvasGroup>().alpha = 0f;
+			}
+		}
+	}
+
 	
 	// ----------- Helper Functions ----------- //
 	// Creates a gameobject with several card prefab objects as children, with each card in the given cards list inside of it.
@@ -213,6 +235,7 @@ public class DatabaseController : MonoBehaviour {
 			CardInfo cardScript = Instantiate(CardPrefab, CardContainer.transform).GetComponent<CardInfo>();
 			cardScript.gameObject.name = card.CardName;
 			// Set fields
+			cardScript.Background.color = DeckColorOptions[CurrentlySelectedColor].color;
 			cardScript.CardName.text = card.CardName;
 			cardScript.CardText.text = card.CardText;
 			cardScript.ManaCostText.text = card.ManaCost.ToString();
@@ -221,13 +244,13 @@ public class DatabaseController : MonoBehaviour {
 				cardScript.AttackText.text = card.Attack.ToString();
 			} else {
 				cardScript.AttackText.text = string.Empty;
-				cardScript.AttackIcon.sprite = null;
+				cardScript.AttackIcon.sprite = TransparentSprite;
 			}
 			if(card.Health != -1) {
 				cardScript.HealthText.text = card.Health.ToString();
 			} else {
 				cardScript.HealthText.text = string.Empty;
-				cardScript.HealthIcon.sprite = null;
+				cardScript.HealthIcon.sprite = TransparentSprite;
 			}
 			// Directions
 			if(card.Directions.HasFlag(Directions.None)) {
