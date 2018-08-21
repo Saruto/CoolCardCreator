@@ -14,7 +14,7 @@ public class CSVParser : MonoBehaviour {
 	readonly static string NewlineCharacter = Environment.NewLine;
 
 	// The order of the columns in the CSV parser.
-	enum CSVColumns { ID, CardName, ManaCost, LandType, Type, CardText, Attack, Health, Directions, Rarity };
+	enum CSVColumns { CardName, ManaCost, LandType, Type, CardText, Attack, Health, Directions, Rarity };
 
 
 
@@ -41,6 +41,7 @@ public class CSVParser : MonoBehaviour {
 		rows = rows.Take(rows.Length - 1).ToArray();
 
 		// For each row, split them up by commas, giving us each element in the row, and then create the card and assign them to their associated variables.
+		int id = 0;
 		foreach(string row in rows) {
 			string[] elements = row.Split(',');
 			// Need to do this to strip out random newline characters.
@@ -48,7 +49,7 @@ public class CSVParser : MonoBehaviour {
 
 			// Assign variables.
 			Card card = new Card();
-			card.ID = Convert.ToInt32(elements[(int)CSVColumns.ID]);
+			card.ID = id++;
 			card.CardName = elements[(int)CSVColumns.CardName];
 			card.ManaCost = elements[(int)CSVColumns.ManaCost];
 			card.Type = elements[(int)CSVColumns.Type];
