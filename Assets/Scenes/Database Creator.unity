@@ -1876,7 +1876,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1300400054}
+      - m_Target: {fileID: 1300400055}
         m_MethodName: OnSaveDeck
         m_Mode: 1
         m_Arguments:
@@ -2101,7 +2101,9 @@ GameObject:
   - component: {fileID: 1300400052}
   - component: {fileID: 1300400051}
   - component: {fileID: 1300400050}
+  - component: {fileID: 1300400056}
   - component: {fileID: 1300400054}
+  - component: {fileID: 1300400055}
   m_Layer: 5
   m_Name: Main Canvas
   m_TagString: Untagged
@@ -2203,7 +2205,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeckRendererCanvas: {fileID: 714202619}
-  DeckRendererCamera: {fileID: 1539519519}
   CardContainerPrefab: {fileID: 1499222121904230, guid: 8818aa48651d4334cbc3586e4c710524,
     type: 2}
   CardPrefab: {fileID: 1224819131253906, guid: b13c75c2448b31345a3e2dd858216dd9, type: 2}
@@ -2222,6 +2223,30 @@ MonoBehaviour:
   - {fileID: 2089318462}
   - {fileID: 2093508526}
   TransparentSprite: {fileID: 21300000, guid: 4ee7eecfe4cb9cf40b20346a856ef43c, type: 3}
+--- !u!114 &1300400055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1300400049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a30890338e271c84fb67064ade60e071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DeckRendererCanvas: {fileID: 714202619}
+  DeckRendererCamera: {fileID: 1539519519}
+--- !u!114 &1300400056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1300400049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a870bba8741ba4fb1fa052987cd609, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1331616796
 GameObject:
   m_ObjectHideFlags: 0
