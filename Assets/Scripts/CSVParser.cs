@@ -43,9 +43,18 @@ public class CSVParser : MonoBehaviour {
 		// For each row, split them up by commas, giving us each element in the row, and then create the card and assign them to their associated variables.
 		int id = 0;
 		foreach(string row in rows) {
-			string[] elements = row.Split(',');
-			// Need to do this to strip out random newline characters.
+			// Splits by commas, unless an element is surrounded with double quotes.
+			Regex rowSplitter = new Regex(",(?=(?:[^\"]*\"[^\"]*\")*(?![^\"]*\"))");
+			string[] elements = rowSplitter.Split(row);
+
+			// Need to do this to strip out random newline characters and the double quotes.
 			elements = elements.Select((element) => { return Regex.Replace(element, @"\t|\n|\r", ""); }).ToArray();
+			elements = elements.Select((element) => { return Regex.Replace(element, "\"", ""); }).ToArray();
+
+			// Ignore rows with empty names or rows with names that begin with a '[' character.
+			if(elements[0] == "" || elements[0].ToCharArray()[0] == '[') {
+				continue;  
+			}
 
 			// Assign variables.
 			Card card = new Card();

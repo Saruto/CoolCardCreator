@@ -127,7 +127,7 @@ public class DeckCreator : MonoBehaviour {
 			cardScript.CardName.text = card.CardName;
 			cardScript.CardText.text = card.CardText;
 			// Mana
-			IEnumerable<char> manaSymbols = card.ManaCost.ToCharArray().Reverse();
+			IEnumerable<char> manaSymbols = card.ManaCost.ToCharArray();
 			foreach(char symbol in manaSymbols) {
 				GameObject symbolIcon = Instantiate(ManaSymbolPrefab, cardScript.ManaCostLayout.transform);
 				switch(symbol) {

@@ -2205,6 +2205,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeckRendererCanvas: {fileID: 714202619}
+  DeckName: {fileID: 1664132088}
+  DeckList: {fileID: 1655506046}
+  DeckColorOptions:
+  - {fileID: 305771031}
+  - {fileID: 2089318462}
+  - {fileID: 2093508526}
   CardContainerPrefab: {fileID: 1499222121904230, guid: 8818aa48651d4334cbc3586e4c710524,
     type: 2}
   CardPrefab: {fileID: 1224819131253906, guid: b13c75c2448b31345a3e2dd858216dd9, type: 2}
@@ -2216,12 +2222,6 @@ MonoBehaviour:
   GreenSymbol: {fileID: 21300000, guid: e817705e9c22db143aa4915ea9eb3207, type: 3}
   YellowSymbol: {fileID: 21300000, guid: 86257fedb3a829a46ae42cda13731b06, type: 3}
   NeutralSymbol: {fileID: 21300000, guid: 59f202fe5d83b5d4d8e8f8e7dbeb0ad6, type: 3}
-  DeckName: {fileID: 1664132088}
-  DeckList: {fileID: 1655506046}
-  DeckColorOptions:
-  - {fileID: 305771031}
-  - {fileID: 2089318462}
-  - {fileID: 2093508526}
   TransparentSprite: {fileID: 21300000, guid: 4ee7eecfe4cb9cf40b20346a856ef43c, type: 3}
 --- !u!114 &1300400055
 MonoBehaviour:
