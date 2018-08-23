@@ -32,6 +32,7 @@ Pongify,P2,P,Spell,Transform target unit into a 0/4.,,,,Common
 Gather Intel,P2,P,Spell,Draw 2 spells.,,,,Common
 Location Change,PP3,R,Spell,Shift all units to the chosen side of the board.,,,,Common
 Mass Confusion,PPP3,R,Spell,All units deal their attack damage to themselves.,,,,Common
+Paranoia Agent,P2,P,Unit,Rotate another target unit 90 ,2,2,u/r,Common
 ,,,,,,,,
 [Red],,,,,,,,
 Mad Lad,R,,Unit,,2,1,l/r,Common
@@ -54,3 +55,4 @@ Embiggen,G,G,Spell,Target unit gets +3/+3.,,,,Common
 ,,,,,,,,
 ,,,,,,,,
 [Yellow],,,,,,,,
+Stun Unit,3Y,Y,Unit,Target Unit can't attack until your next turn,2,4,l/r,Uncommon
