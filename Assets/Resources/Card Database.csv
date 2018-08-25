@@ -27,12 +27,14 @@ Hey die hehe,2,,Spell,Destroy target unit that attacks in all directions,,,,
 Unsummon,P,P,Spell,Return target unit to its owner's hand.,,,,Common
 Wrong Address,P,A,Spell,Prevent all combat damage that would be dealt during your opponent's next combat step.,,,,Common
 Bounty Poster,P1,Y,Spell,Draw 2 units.,,,,Common
-Switcharoo,P1,P,Spell,Swap the position of 2 units.,,,,Common
+Exploit the chaos,P1,Y,Spell,Swap the position of 2 units.,,,,Common
 Pongify,P2,P,Spell,Transform target unit into a 0/4.,,,,Common
 Gather Intel,P2,P,Spell,Draw 2 spells.,,,,Common
 Location Change,PP3,R,Spell,Shift all units to the chosen side of the board.,,,,Common
 Mass Confusion,PPP3,R,Spell,All units deal their attack damage to themselves.,,,,Common
-Paranoia Agent,P2,P,Unit,Rotate another target unit 90 ,2,2,u/r,Common
+Paranoia Agent,P2,P,Unit,Battlecry: Rotate another target unit 90 ,2,2,u/r,Common
+Chaos Beneficier,PP2,Y,Unit,Battlecry: Swap this units position with another target unit,3,4,l/d,Common
+Calculated Mastermind,P1,P,Unit,Battlecry: Draw a card,0,4,u/r,Common
 ,,,,,,,,
 [Red],,,,,,,,
 Mad Lad,R,,Unit,,2,1,l/r,Common
@@ -41,18 +43,20 @@ Fireburst,RR1,P,Spell,Deal 2 damage to all units in a chosen 2x2 area.,,,,Common
 Chain Lightning,RR2,R,Spell,"Deal 3 damage to target unit. If there is a unit adjacent to the target that an opponent controls that wasn't targeted by this card already, repeat this process with it as the new target.",,,,Common
 Induced Rage,R3,P,Spell,Target unit deals damage to all units adjacent to it.,,,,Common
 Massive Music,R3,P,Spell,All units take damage equal to 5 minus the number of attack directions they have.,,,,Common
+Rioter,R2,R,Unit,Battlecry: Deal 3 damage to target enemy unit,2,2,d/l,Common
 ,,,,,,,,
 [Gray],,,,,,,,
 Murder,AA1,G,Spell,Destroy target unit.,,,,Common
 All for One,AA3,P,Spell,Destroy all units.,,,,Common
-,,,,,,,,
-,,,,,,,,
+Hired Gun,A2,A,Unit,Battlecry: Put 2 -1/-1 counters on target Unit,2,2,u/d,Common
+Mind Infiltrator,A4,A,Unit,Battlecry: Target player discards a card,3,2,u/d,Common
 ,,,,,,,,
 [Green],,,,,,,,
 Embiggen,G,G,Spell,Target unit gets +3/+3.,,,,Common
-,,,,,,,,
+Boisterous Elf,G,G,Unit,Battlecry: another friendly unit gets +2/+2 until end of turn,2,2,r/d,Common
 ,,,,,,,,
 ,,,,,,,,
 ,,,,,,,,
 [Yellow],,,,,,,,
-Stun Unit,3Y,Y,Unit,Target Unit can't attack until your next turn,2,4,l/r,Uncommon
+Stun Unit,3Y,Y,Unit,Battlecry: Target Unit can't attack until your next turn,2,4,l/r,Uncommon
+Selfless Runner,2Y,Y,Unit,Battlecry: Return another target friendly creature to your hand,2,2,l/r,Common
