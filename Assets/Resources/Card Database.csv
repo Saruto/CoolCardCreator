@@ -51,47 +51,29 @@ Rioter,R2,R,Unit,Battlecry: Deal 3 damage to target enemy unit,2,2,d/l,Common
 Mosh Pit Rioter,R3,G,Unit,Battlecry: This unit gets a +1/+1 counter for each enemy unit adjacent to it,3,3,u/r,Common
 Fanatic Boy,R1,R,Unit,Swiftness. Battlecry: This unit gets +1/+0 until end of turn. ,2,2,u/d,Common
 Swift Boy,R,R,Unit,Swiftness,1,1,u/d/l,Common
-Angry Riot Man,R,R,Unit,"Swiftness, After this card attacks, the opponent reveals the top card of their library. If it’s not a Unit card, that player puts it into their hand.",2,2,u/d,Common
+Angry Riot Man,R,R,Unit,"Swiftness, After this card attacks, the opponent reveals the top card of their library. If it's not a Unit card, that player puts it into their hand.",2,2,u/d,Common
 Raging Rioter,R,Y,Unit,"Whenever a Unit enters the battlefield, gain +1/+0 until the end of turn",1,1,d/r,Common
 Focused Riot Boy,R1,R,Unit,,2,2,u,Common
 Angry Riot man and friends,R2,G,Unit,Battlecry: This unit gets +X/+0 where X is the number of units you control,0,2,l/r,Common
 Ouchie Wowchie,R3,R,Unit,When this Unit dies it deals 6 damage to it's controller,6,1,r,Common
-I’M SO FUCKING ANGRY AAAA,R3,R,Spell,Target unit gets +4/+0 until end of turn and takes 2 damage,,,,Common
-,,,,,,,,
-,,,,,,,,
+I'M SO FUCKING ANGRY AAAA,R3,R,Spell,Target unit gets +4/+0 until end of turn and takes 2 damage,,,,Common
 ,,,,,,,,
 [Gray],,,,,,,,
 Murder,AA1,G,Spell,Destroy target unit.,,,,Common
 All for One,AA3,P,Spell,Destroy all units.,,,,Common
-<<<<<<< HEAD
-Hired Gun,A2,A,Unit,Battlecry: Put 2 -1/-1 counters on target Unit,2,2,u/d,Common
-Mind Infiltrator,A4,A,Unit,Battlecry: Target player discards a card,3,2,u/d,Common
+Hired Gun,A2,A,Unit,Battlecry: Put 2 -1/-1 counters on target unit.,2,2,u/d,Common
+Mind Infiltrator,A4,A,Unit,Battlecry: Target player discards a card.,3,2,u/d,Common
 Cripple,A,A,Spell,Destroy target unit with 1 attack or less,,,,Common
 ,,,,,,,,
 [Green],,,,,,,,
 Embiggen,G,G,Spell,Target unit gets +3/+3.,,,,Common
-Boisterous Elf,G,G,Unit,Battlecry: another friendly unit gets +2/+2 until end of turn,2,2,r/d,Common
-Nature Spreads,G,G,Spell,Summon 2 1/1 nature tokens (To the left and right of eachother I guess),,,,Common
-,,,,,,,,
-,,,,,,,,
-[Yellow],,,,,,,,
-Stun Unit,Y3,Y,Unit,Battlecry: Target Unit can't attack until your next turn,2,4,l/r,Uncommon
-Selfless Runner,Y2,Y,Unit,Battlecry: Return another target friendly creature to your hand,2,2,l/r,Common
-Strong Boy,Y1,Y,Unit,,3,2,d/l,Common
-Call in the boys,Y2,G,Spell,Draw 2 Units.,,,,Common
-Mind Hacker,Y4,P,Unit,Battlecry: Gain control of target unit until end of turn. It gains swiftness.,2,3,u/d/l,Uncommon
-Peacekeeper,Y1,P,Unit,"Battlecry: When this unit enters the battlefield, prevent all damage target unit would deal during its next combat step.",2,2,u/l,Uncommon
-=======
-Hired Gun,A2,A,Unit,Battlecry: Put 2 -1/-1 counters on target unit.,2,2,u/d,Common
-Mind Infiltrator,A4,A,Unit,Battlecry: Target player discards a card.,3,2,u/d,Common
-,,,,,,,,
-[Green],,,,,,,,
-Embiggen,G,G,Spell,Target unit gets +3/+3.,,,,Common
 Boisterous Elf,G2,G,Unit,Battlecry: Another friendly unit gets +2/+2 until end of turn.,2,2,r/d,Common
-,,,,,,,,
-,,,,,,,,
+Nature Spreads,G,G,Spell,Summon 2 1/1 nature tokens (To the left and right of eachother I guess),,,,Common
 ,,,,,,,,
 [Yellow],,,,,,,,
 Stun Unit,Y3,Y,Unit,Battlecry: Target unit can't attack until your next turn.,2,4,l/r,Uncommon
 Selfless Runner,Y2,Y,Unit,Battlecry: Return another target friendly unit to your hand.,2,2,l/r,Common
->>>>>>> cf2c1e90125601ff006a93a25e9e6447d6e5ef48
+Strong Boy,Y1,Y,Unit,,3,2,d/l,Common
+Call in the boys,Y2,G,Spell,Draw 2 Units.,,,,Common
+Mind Hacker,Y4,P,Unit,Battlecry: Gain control of target unit until end of turn. It gains swiftness.,2,3,u/d/l,Uncommon
+Peacekeeper,Y1,P,Unit,"Battlecry: When this unit enters the battlefield, prevent all damage target unit would deal during its next combat step.",2,2,u/l,Uncommon
