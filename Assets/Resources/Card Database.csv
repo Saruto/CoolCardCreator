@@ -38,6 +38,8 @@ Calculated Mastermind,P1,P,Unit,Battlecry: Draw a card,0,4,u/r,Common
 Really Smart Guy,PP4,A,Unit,"Whenever the opponent draws a card, you draw two cards. ",7,9,u/l/r,Mythic Epic Rare
 Remand,P1,P,Spell,Return target unit to its owner's hand. Draw a card.,,,,Rare
 Instant Transmission,P1,P,Spell,Move one target unit to another to any other open space,,,,
+Drag em down,P3,P,Spell,All units slide left. Then all units slide down.,,,,Common
+Unbeknownst Theft ,PP4,P,Spell,Gain control of target creature,,,,Rare
 ,,,,,,,,
 [Red],,,,,,,,
 Mad Lad,R,,Unit,,2,1,l/r,Common
@@ -64,6 +66,8 @@ All for One,AA3,P,Spell,Destroy all units.,,,,Common
 Hired Gun,A2,A,Unit,Battlecry: Put 2 -1/-1 counters on target unit.,2,2,u/d,Common
 Mind Infiltrator,A4,A,Unit,Battlecry: Target player discards a card.,3,2,u/d,Common
 Cripple,A,A,Spell,Destroy target unit with 1 attack or less,,,,Common
+Divine-Nation,A2,A,Spell,Draw two cards,,,,Common
+Mega Divine-Nation,AA3,A,Spell,Draw Three Cards,,,,Common
 ,,,,,,,,
 [Green],,,,,,,,
 Embiggen,G,G,Spell,Target unit gets +3/+3.,,,,Common
@@ -77,3 +81,6 @@ Strong Boy,Y1,Y,Unit,,3,2,d/l,Common
 Call in the boys,Y2,G,Spell,Draw 2 Units.,,,,Common
 Mind Hacker,Y4,P,Unit,Battlecry: Gain control of target unit until end of turn. It gains swiftness.,2,3,u/d/l,Uncommon
 Peacekeeper,Y1,P,Unit,"Battlecry: When this unit enters the battlefield, prevent all damage target unit would deal during its next combat step.",2,2,u/l,Uncommon
+,,,,,,,,
+[Multicolor],,,,,,,,
+Big boy revelation,AP5,A,Spell,Gain 7 life. Draw 7 cards,,,,Mythic Rare
