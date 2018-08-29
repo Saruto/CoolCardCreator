@@ -20,67 +20,66 @@ Angry Wrecking Ball,5,,Unit,Collateral Damage,4,4,u/d,Common
 Big Angry Kraken Monster,6,,Unit,Collateral Damage,5,6,u/d/l,Common
 Angry Chasing Bear,6,,Unit,"Collateral Damage, Pursuit",4,6,u/d/r,Common
 Army Leader,7,,Unit,"Whenever this kills a unit, you may put a unit from your hand onto the battlefield.",5,5,d/l/r,Common
-Hey die hehe,2,,Spell,Destroy target unit that attacks in all directions,,,,Common
+Hey die hehe,2,,Spell,Destroy target unit that attacks in all directions.,,,,Common
 ,,,,,,,,
 [Purple],,,,,,,,
 Mix it Up,P,P,Spell,Turn target unit 90 degrees. Draw a card.,,,,Common
 Unsummon,P,P,Spell,Return target unit to its owner's hand.,,,,Common
 Wrong Address,P,A,Spell,Prevent all combat damage that would be dealt during your opponent's next combat step.,,,,Common
-Bounty Poster,P1,Y,Spell,Draw 2 units.,,,,Common
-Exploit the Chaos,P1,Y,Spell,Swap the position of 2 units.,,,,Common
-Boy to Bot,P2,P,Spell,Transform target unit into a 0/4.,,,,Common
-Gather Intel,P2,P,Spell,Draw 2 spells.,,,,Common
-Location Change,PP3,R,Spell,Shift all units to the chosen side of the board.,,,,Common
-Mass Confusion,PPP3,R,Spell,All units deal their attack damage to themselves.,,,,Common
+Exploit the Chaos,P,Y,Spell,Swap the position of 2 units.,,,,Common
+Boy to Bot,P2,P,Spell,Transform a unit into a 0/4.,,,,Common
+Gather Intel,P2,P,Spell,Draw two spells.,,,,Common
+Location Change,P3,R,Spell,Shift all units to a chosen side of the board.,,,,Common
+Mass Confusion,PP3,R,Spell,All units deal their attack damage to themselves.,,,,Common
 Paranoia Agent,P2,P,Unit,Battlecry: Rotate another target unit 90 degrees.,2,2,u/r,Common
-Chaos Beneficier,PP2,Y,Unit,Battlecry: Swap this units position with another target unit,3,4,l/d,Common
-Calculated Mastermind,P1,P,Unit,Battlecry: Draw a card,0,4,u/r,Common
+Chaos Beneficier,PP2,Y,Unit,Battlecry: Swap this unit's position with another target unit.,3,4,l/d,Common
+Calculated Mastermind,P1,P,Unit,Battlecry: Draw a card.,0,3,u/r,Common
 Really Smart Guy,PP4,A,Unit,"Whenever the opponent draws a card, you draw two cards. ",7,9,u/l/r,Mythic Epic Rare
-Remand,P1,P,Spell,Return target unit to its owner's hand. Draw a card.,,,,Rare
-Instant Transmission,P1,P,Spell,Move one target unit to another to any other open space,,,,
-Drag em down,P3,P,Spell,All units slide left. Then all units slide down.,,,,Common
-Unbeknownst Theft ,PP4,P,Spell,Gain control of target creature,,,,Rare
+Remand,P1,P,Spell,Return a unit to its owner's hand. Draw a card.,,,,Rare
+Instant Transmission,P1,P,Spell,Move a unit to any open cell.,,,,
+Drag em down,P3,P,Spell,"All units slide left. Then, all units slide down.",,,,Common
+Unbeknownst Theft,PP4,P,Spell,Gain control of target creature,,,,Rare
 ,,,,,,,,
 [Red],,,,,,,,
 Mad Lad,R,,Unit,,2,1,l/r,Common
 Raging Boy,R,,Unit,,2,1,u/d,Common
-Bolt,R1,R,Spell,Deal 3 damage to a unit.,,,,Common
-Fireburst Grenade,RR1,P,Spell,Deal 2 damage to all units in a chosen 2x2 area.,,,,Common
+Bolt,R1,R,Spell,Deal 3 damage.,,,,Common
+Fireburst Grenade,RR1,P,Spell,Area 2: Deal 2 damage.,,,,Common
 Chain Lightning Shot,RR2,R,Spell,"Deal 3 damage to target unit. If there is a unit adjacent to the target that an opponent controls that wasn't targeted by this card already, repeat this process with it as the new target.",,,,Common
-Induced Rage,R3,P,Spell,Target unit deals damage to all units adjacent to it.,,,,Common
+Induced Rage,R3,P,Spell,Target unit deals damage to all adjacent units.,,,,Common
 Massive Music,R3,P,Spell,All units take damage equal to 5 minus the number of attack directions they have.,,,,Common
-Rioter,R2,R,Unit,Battlecry: Deal 3 damage to target enemy unit,2,2,d/l,Common
-Mosh Pit Rioter,R3,G,Unit,Battlecry: This unit gets a +1/+1 counter for each enemy unit adjacent to it,3,3,u/r,Common
+Rioter,R2,R,Unit,Battlecry: Deal 3 damage to an enemy unit.,2,2,d/l,Common
+Mosh Pit Rioter,R3,G,Unit,Battlecry: Gain a +1/+1 counter for each adjacent enemy unit.,3,3,u/r,Common
 Fanatic Boy,R1,R,Unit,Swiftness. Battlecry: This unit gets +1/+0 until end of turn. ,2,2,u/d,Common
-Swift Boy,R,R,Unit,Swiftness,1,1,u/d/l,Common
-Angry Riot Man,R,R,Unit,"Swiftness, After this card attacks, the opponent reveals the top card of their library. If it's not a Unit card, that player puts it into their hand.",2,2,u/d,Common
-Raging Rioter,R,Y,Unit,"Whenever a Unit enters the battlefield, gain +1/+0 until the end of turn",1,1,d/r,Common
+Swift Boy,R,R,Unit,Swiftness.,1,1,u/d/l,Common
+Angry Riot Man,R,R,Unit,"Swiftness, After this card attacks, the opponent reveals the top card of their library. If it's a spell, that player puts it into their hand.",2,2,u/d,Common
+Raging Rioter,R,Y,Unit,"Whenever a unit enters the battlefield, gain +1/+0 until the end of turn.",1,1,d/r,Common
 Focused Riot Boy,R1,R,Unit,,2,2,u,Common
-Angry Riot man and friends,R2,G,Unit,Battlecry: This unit gets +X/+0 where X is the number of units you control,0,2,l/r,Common
-Ouchie Wowchie,R3,R,Unit,When this Unit dies it deals 6 damage to it's controller,6,1,r,Common
-I'M SO FUCKING ANGRY AAAA,R3,R,Spell,Target unit gets +4/+0 until end of turn and takes 2 damage,,,,Common
+Angry Riot man and friends,R2,G,Unit,Battlecry: Gains +1 attack for each unit you control.,0,2,l/r,Common
+Ouchie Wowchie,R3,R,Unit,Deathrattle: This unit deals 6 damage to it's controller.,6,1,r,Common
+I'M SO FUCKING ANGRY AAAA,R2,R,Spell,Target unit gets +4/-2 until end of turn.,,,,Common
 ,,,,,,,,
 [Gray],,,,,,,,
-Murder,AA1,G,Spell,Destroy target unit.,,,,Common
+Murder,AA1,G,Spell,Destroy a unit.,,,,Common
 All for One,AA3,P,Spell,Destroy all units.,,,,Common
-Hired Gun,A2,A,Unit,Battlecry: Put 2 -1/-1 counters on target unit.,2,2,u/d,Common
+Hired Gun,A2,A,Unit,Battlecry: Put two -1/-1 counters on a unit.,2,2,u/d,Common
 Mind Infiltrator,A4,A,Unit,Battlecry: Target player discards a card.,3,2,u/d,Common
-Cripple,A,A,Spell,Destroy target unit with 1 attack or less,,,,Common
-Divine-Nation,A2,A,Spell,Draw two cards,,,,Common
-Mega Divine-Nation,AA3,A,Spell,Draw Three Cards,,,,Common
+Cripple,A,A,Spell,Destroy a unit with attack or health 1 or less.,,,,Common
+Divine-Nation,A2,A,Spell,Draw two cards.,,,,Common
+Mega Divine-Nation,AA3,A,Spell,Draw three Cards.,,,,Common
 ,,,,,,,,
 [Green],,,,,,,,
 Embiggen,G,G,Spell,Target unit gets +3/+3.,,,,Common
 Boisterous Elf,G2,G,Unit,Battlecry: Another friendly unit gets +2/+2 until end of turn.,2,2,r/d,Common
-Nature Spreads,G,G,Spell,Summon 2 1/1 nature tokens (To the left and right of eachother I guess),,,,Common
+Nature Spreads,G,G,Spell,Summon two 1/1 nature tokens (To the left and right of eachother I guess),,,,Common
 ,,,,,,,,
 [Yellow],,,,,,,,
 Stun Unit,Y3,Y,Unit,Battlecry: Target unit can't attack until your next turn.,2,4,l/r,Uncommon
-Selfless Runner,Y2,Y,Unit,Battlecry: Return another target friendly unit to your hand.,2,2,l/r,Common
+Selfless Runner,Y2,Y,Unit,Battlecry: Return another friendly unit to your hand.,2,2,l/r,Common
 Strong Boy,Y1,Y,Unit,,3,2,d/l,Common
-Call in the boys,Y2,G,Spell,Draw 2 Units.,,,,Common
-Mind Hacker,Y4,P,Unit,Battlecry: Gain control of target unit until end of turn. It gains swiftness.,2,3,u/d/l,Uncommon
-Peacekeeper,Y1,P,Unit,"Battlecry: When this unit enters the battlefield, prevent all damage target unit would deal during its next combat step.",2,2,u/l,Uncommon
+Call in the boys,Y2,G,Spell,Draw two units.,,,,Common
+Mind Hacker,Y4,P,Unit,Battlecry: Gain control of a unit and give it swiftness until end of turn.,2,3,u/d/l,Uncommon
+Peacekeeper,Y1,P,Unit,Battlecry: Prevent all damage a unit would deal during the next combat step.,2,2,u/l,Uncommon
 ,,,,,,,,
 [Multicolor],,,,,,,,
-Big boy revelation,AP5,A,Spell,Gain 7 life. Draw 7 cards,,,,Mythic Rare
+Big boy revelation,AP5,A,Spell,Gain 7 life. Draw 3 cards.,,,,Mythic Rare
