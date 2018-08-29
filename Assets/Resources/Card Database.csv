@@ -39,12 +39,13 @@ Remand,P1,P,Spell,Return a unit to its owner's hand. Draw a card.,,,,Rare
 Instant Transmission,P1,P,Spell,Move a unit to any open cell.,,,,
 Drag em down,P3,P,Spell,"All units slide left. Then, all units slide down.",,,,Common
 Unbeknownst Theft,PP4,P,Spell,Gain control of target creature,,,,Rare
+Master of Trickery,PP4,P,Unit,"Whenever a unit enters the battlefield, swap its position with this unit.",5,7,u/l/r,Rare
 ,,,,,,,,
 [Red],,,,,,,,
 Mad Lad,R,,Unit,,2,1,l/r,Common
 Raging Boy,R,,Unit,,2,1,u/d,Common
 Bolt,R1,R,Spell,Deal 3 damage.,,,,Common
-Fireburst Grenade,RR1,P,Spell,Area 2: Deal 2 damage.,,,,Common
+Fireburst Grenade,RR1,P,Spell,Area 2 - Deal 2 damage.,,,,Common
 Chain Lightning Shot,RR2,R,Spell,"Deal 3 damage to target unit. If there is a unit adjacent to the target that an opponent controls that wasn't targeted by this card already, repeat this process with it as the new target.",,,,Common
 Induced Rage,R3,P,Spell,Target unit deals damage to all adjacent units.,,,,Common
 Massive Music,R3,P,Spell,All units take damage equal to 5 minus the number of attack directions they have.,,,,Common
@@ -80,6 +81,10 @@ Strong Boy,Y1,Y,Unit,,3,2,d/l,Common
 Call in the boys,Y2,G,Spell,Draw two units.,,,,Common
 Mind Hacker,Y4,P,Unit,Battlecry: Gain control of a unit and give it swiftness until end of turn.,2,3,u/d/l,Uncommon
 Peacekeeper,Y1,P,Unit,Battlecry: Prevent all damage a unit would deal during the next combat step.,2,2,u/l,Uncommon
+Sneaky Booter,4Y,Y,Unit,Battlecry: Return a unit to its owner's hand.,3,4,u/d/l,Common
+Rough Grabber,3Y,Y,Unit,Battlecry: Target unit can't attack until this unit dies.,3,3,d/l/r,Common
+Big Hacker,5Y,Y,Unit,Battlecry: Area 2 - Units can't attack until this unit dies.,4,4,u/d/r,Common
+Tricky Swapper,3Y,Y,Unit,Battlecry: Swap this unit's position with any other target unit.,2,2,u/l/r,Common
 ,,,,,,,,
 [Multicolor],,,,,,,,
 Big boy revelation,AP5,A,Spell,Gain 7 life. Draw 3 cards.,,,,Mythic Rare
