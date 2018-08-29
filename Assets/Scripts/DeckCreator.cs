@@ -142,6 +142,17 @@ public class DeckCreator : MonoBehaviour {
 					break;
 				}
 			}
+			// Land
+			if(card.LandType != ' ') {
+				GameObject symbolIcon = Instantiate(ManaSymbolPrefab, cardScript.LandLayout.transform);
+				switch(card.LandType) {
+				case 'P': symbolIcon.GetComponent<Image>().sprite = PurpleSymbol; break;
+				case 'R': symbolIcon.GetComponent<Image>().sprite = RedSymbol; break;
+				case 'A': symbolIcon.GetComponent<Image>().sprite = GraySymbol; break;
+				case 'G': symbolIcon.GetComponent<Image>().sprite = GreenSymbol; break;
+				case 'Y': symbolIcon.GetComponent<Image>().sprite = YellowSymbol; break;
+				}
+			}
 			// Attack/Health
 			if(card.Attack != -1) {
 				cardScript.AttackText.text = card.Attack.ToString();
@@ -156,24 +167,21 @@ public class DeckCreator : MonoBehaviour {
 				cardScript.HealthIcon.sprite = TransparentSprite;
 			}
 			// Directions
-			if(card.Directions.HasFlag(Directions.None)) {
-				cardScript.UpArrow.enabled = false;
-				cardScript.DownArrow.enabled = false;
-				cardScript.LeftArrow.enabled = false;
-				cardScript.RightArrow.enabled = false;
-			} else {
-				if(card.Directions.HasFlag(Directions.Up)) {
-					cardScript.UpArrow.enabled = true;
-				}
-				if(card.Directions.HasFlag(Directions.Down)) {
-					cardScript.DownArrow.enabled = true;
-				}
-				if(card.Directions.HasFlag(Directions.Left)) {
-					cardScript.LeftArrow.enabled = true;
-				}
-				if(card.Directions.HasFlag(Directions.Right)) {
-					cardScript.RightArrow.enabled = true;
-				}
+			cardScript.UpArrow.enabled = false;
+			cardScript.DownArrow.enabled = false;
+			cardScript.LeftArrow.enabled = false;
+			cardScript.RightArrow.enabled = false;
+			if(card.Directions.HasFlag(Directions.Up)) {
+				cardScript.UpArrow.enabled = true;
+			}
+			if(card.Directions.HasFlag(Directions.Down)) {
+				cardScript.DownArrow.enabled = true;
+			}
+			if(card.Directions.HasFlag(Directions.Left)) {
+				cardScript.LeftArrow.enabled = true;
+			}
+			if(card.Directions.HasFlag(Directions.Right)) {
+				cardScript.RightArrow.enabled = true;
 			}
 		}
 	}

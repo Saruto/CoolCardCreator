@@ -9,6 +9,7 @@ public struct Card {
 	public int ID;
 	public string CardName;
 	public string ManaCost;
+	public char LandType;
 	public string Type;
 	public string CardText;
 	public int Attack;
@@ -44,4 +45,5 @@ public class CardInfo : MonoBehaviour {
 	public Text HealthText;
 
 	public GameObject ManaCostLayout;
+	public GameObject LandLayout;
 }

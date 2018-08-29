@@ -63,6 +63,11 @@ public class CSVParser : MonoBehaviour {
 			card.ManaCost = elements[(int)CSVColumns.ManaCost];
 			card.Type = elements[(int)CSVColumns.Type];
 			card.CardText = elements[(int)CSVColumns.CardText];
+			if(elements[(int)CSVColumns.LandType] != "") {
+				card.LandType = elements[(int)CSVColumns.LandType][0];
+			} else {
+				card.LandType = ' ';
+			}
 			if(elements[(int)CSVColumns.Attack] != "") {
 				card.Attack = Convert.ToInt32(elements[(int)CSVColumns.Attack]);
 			} else {
