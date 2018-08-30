@@ -3,20 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-// Represents a single row of card information from the CSV
-public struct Card {
-	public int ID;
-	public string CardName;
-	public string ManaCost;
-	public char LandType;
-	public string Type;
-	public string CardText;
-	public int Attack;
-	public int Health;
-	public Directions Directions;
-	public Rarity Rarity;
-}
+using FileHelpers;
 
 // Enum flag, used to keep track of attack directions.
 // For example: "Directions dir = Directions.Up | Directions.Left;" represents a unit with the up and left attack directions.
@@ -27,23 +14,61 @@ public enum Directions { None = 0, Up = 1, Down = 2, Left = 4, Right = 8 }
 // Used to keep track of Rarity.
 public enum Rarity { Common, Uncommon, Rare, Mythic }
 
+// Represents a single row of card information from the CSV
+[DelimitedRecord(",")]
+[IgnoreFirst(1)]
+[IgnoreEmptyLines()]
+public class Card {
+	public string CardName;
+	public string ManaCost;
 
-// Script attached to all card gameobjects that define all of its info fields.
-public class CardInfo : MonoBehaviour {
-	// References to the various GOs on the template.
-	public Image Background;
-	public Image UpArrow;
-	public Image DownArrow;
-	public Image LeftArrow;
-	public Image RightArrow;
-	public Image AttackIcon;
-	public Image HealthIcon;
+	[FieldNullValue(typeof(char), " ")]
+	public char LandType;
 
-	public Text CardName;
-	public Text CardText;
-	public Text AttackText;
-	public Text HealthText;
+	public string Type;
 
-	public GameObject ManaCostLayout;
-	public GameObject LandLayout;
+	[FieldNullValue(typeof(string), "")]
+	[FieldQuoted('"', QuoteMode.OptionalForBoth, MultilineMode.AllowForRead)]
+	public string CardText;
+
+	[FieldNullValue(typeof(int), "-1")]
+	public int Attack;
+
+	[FieldNullValue(typeof(int), "-1")]
+	public int Health;
+
+	[FieldConverter(typeof(DirectionsConverter))]
+	[FieldNullValue(typeof(Directions), "None")]
+	public Directions Directions;
+
+	[FieldNullValue(typeof(Rarity), "Common")]
+	public Rarity Rarity;
+
+	public override string ToString() {
+		return CardName;
+	}
+}
+
+// Converter used for parsing the direction string to an enum.
+public class DirectionsConverter : ConverterBase {
+	public override object StringToField(string from) {
+		string[] csvDirections = from.Split('/');
+		Directions directions = Directions.None;
+		foreach(string dir in csvDirections) {
+			switch(dir) {
+			case "u":
+				directions |= Directions.Up; break;
+			case "d":
+				directions |= Directions.Down; break;
+			case "l":
+				directions |= Directions.Left; break;
+			case "r":
+				directions |= Directions.Right; break;
+			}
+		}
+		return directions;
+	}
+	public override string FieldToString(object from) {
+		return from.ToString();
+	}
 }

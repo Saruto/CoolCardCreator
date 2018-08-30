@@ -34,7 +34,7 @@ Mass Confusion,PP3,R,Spell,All units deal their attack damage to themselves.,,,,
 Paranoia Agent,P2,P,Unit,Battlecry: Rotate another target unit 90 degrees.,2,2,u/r,Common
 Chaos Beneficier,PP2,Y,Unit,Battlecry: Swap this unit's position with another target unit.,3,4,l/d,Common
 Calculated Mastermind,P1,P,Unit,Battlecry: Draw a card.,0,3,u/r,Common
-Really Smart Guy,PP4,A,Unit,"Whenever the opponent draws a card, you draw two cards. ",7,9,u/l/r,Mythic Epic Rare
+Really Smart Guy,PP4,A,Unit,"Whenever the opponent draws a card, you draw two cards. ",7,9,u/l/r,Mythic
 Remand,P1,P,Spell,Return a unit to its owner's hand. Draw a card.,,,,Rare
 Instant Transmission,P1,P,Spell,Move a unit to any open cell.,,,,
 Drag em down,P3,P,Spell,"All units slide left. Then, all units slide down.",,,,Common
@@ -87,4 +87,4 @@ Big Hacker,5Y,Y,Unit,Battlecry: Area 2 - Units can't attack until this unit dies
 Tricky Swapper,3Y,Y,Unit,Battlecry: Swap this unit's position with any other target unit.,2,2,u/l/r,Common
 ,,,,,,,,
 [Multicolor],,,,,,,,
-Big boy revelation,AP5,A,Spell,Gain 7 life. Draw 3 cards.,,,,Mythic Rare
+Big boy revelation,AP5,A,Spell,Gain 7 life. Draw 3 cards.,,,,Mythic

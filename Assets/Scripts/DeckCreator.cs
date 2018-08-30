@@ -65,7 +65,7 @@ public class DeckCreator : MonoBehaviour {
 			string[] numberCardNamePair = row.Split(new char[]{ ' ' }, 2);
 			int number = Convert.ToInt32(numberCardNamePair[0]);
 			// Search the AllCards list for the card name
-			Card card = Parser.AllCards.Find((c) => c.CardName == numberCardNamePair[1]);
+			Card card = Array.Find(Parser.AllCards, (c) => c.CardName == numberCardNamePair[1]);
 			if(card.CardName != numberCardNamePair[1]) {
 				Debug.LogWarning("Card not found in the Card Database! Card Name: " + numberCardNamePair[1]);
 			}
@@ -75,7 +75,7 @@ public class DeckCreator : MonoBehaviour {
 			}
 		}
 		// Make the deck.
-		MakeDeck(cards, DeckName.text);
+		MakeDeck(cards.ToArray(), DeckName.text);
 	}
 
 
@@ -102,8 +102,8 @@ public class DeckCreator : MonoBehaviour {
 	// ----------- Helper Functions ----------- //
 	// Creates a gameobject with several card prefab objects as children, with each card in the given cards list inside of it.
 	// From Card Struct -> Card GameObject
-	void MakeDeck(List<Card> deck, string deckName) {
-		if(deck.Count == 0) {
+	void MakeDeck(Card[] deck, string deckName) {
+		if(deck.Length == 0) {
 			Debug.LogWarning("No Cards in the deck list!");
 			return;
 		}
@@ -118,9 +118,9 @@ public class DeckCreator : MonoBehaviour {
 		CardContainer.name = deckName + " - " + DateTime.Now;
 		
 		// Create a prefab for each card using the card prefab template.
-		for(int i = 0; i < deck.Count; i++) {
+		for(int i = 0; i < deck.Length; i++) {
 			Card card = deck[i];
-			CardInfo cardScript = Instantiate(CardPrefab, CardContainer.transform).GetComponent<CardInfo>();
+			CardScript cardScript = Instantiate(CardPrefab, CardContainer.transform).GetComponent<CardScript>();
 			cardScript.gameObject.name = card.CardName;
 			// Set fields
 			cardScript.Background.color = DeckColorOptions[CurrentlySelectedColor].color;
