@@ -51,9 +51,11 @@ Induced Rage,R3,P,Spell,Target unit deals damage to all adjacent units.,,,,Commo
 Massive Music,R3,P,Spell,All units take damage equal to 5 minus the number of attack directions they have.,,,,Common
 Rioter,R2,R,Unit,Battlecry: Deal 3 damage to an enemy unit.,2,2,d/l,Common
 Mosh Pit Rioter,R3,G,Unit,Battlecry: Gain a +1/+1 counter for each adjacent enemy unit.,3,3,u/r,Common
-Fanatic Boy,R1,R,Unit,Swiftness. Battlecry: This unit gets +1/+0 until end of turn. ,2,2,u/d,Common
+Fanatic Boy,R1,R,Unit,"Swiftness.
+Battlecry: This unit gets +1/+0 until end of turn. ",2,2,u/d,Common
 Swift Boy,R,R,Unit,Swiftness.,1,1,u/d/l,Common
-Angry Riot Man,R,R,Unit,"Swiftness, After this card attacks, the opponent reveals the top card of their library. If it's a spell, that player puts it into their hand.",2,2,u/d,Common
+Angry Riot Man,R,R,Unit,"Swiftness.
+After this card attacks, the opponent reveals the top card of their library. If it's a spell, that player puts it into their hand.",2,2,u/d,Common
 Raging Rioter,R,Y,Unit,"Whenever a unit enters the battlefield, gain +1/+0 until the end of turn.",1,1,d/r,Common
 Focused Riot Boy,R1,R,Unit,,2,2,u,Common
 Angry Riot man and friends,R2,G,Unit,Battlecry: Gains +1 attack for each unit you control.,0,2,l/r,Common
