@@ -90,3 +90,8 @@ Tricky Swapper,3Y,Y,Unit,Battlecry: Swap this unit's position with any other tar
 ,,,,,,,,
 [Multicolor],,,,,,,,
 Big boy revelation,AP5,A,Spell,Gain 7 life. Draw 3 cards.,,,,Mythic
+"Paul Newmaker, Seeker of Truth",GGY2,,Unit,"Whenever you gain life, each friendly unit gains +1/+1 and restores 1 health.
+Your opponent plays with their hand revealed. 
+At the beginning of the opponent's draw step, name a card. If the correct card is named gain 2 life.",4,4,u/l/r,Mythic
+"Navi, Nimble Sharpshooter",RRY1,,Unit,"Battlecry: Deal 2 damage.
+Whenever you play a card, teleport next to an enemy unit, deal 2 damage to it, and push them.",3,2,d/l/r,Mythic
