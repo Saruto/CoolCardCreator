@@ -61,6 +61,7 @@ Focused Riot Boy,R1,R,Unit,,2,2,u,Common
 Angry Riot man and friends,R2,G,Unit,Battlecry: Gains +1 attack for each unit you control.,0,2,l/r,Common
 Ouchie Wowchie,R3,R,Unit,Deathrattle: This unit deals 6 damage to it's controller.,6,1,r,Common
 I'M SO FUCKING ANGRY AAAA,R2,R,Spell,Target unit gets +4/-2 until end of turn.,,,,Common
+Spawner of boys,R,R,Unit,At the end of your turn if you control an odd number of creatures you may place a 1/1 rioter that attacks left and right,1,1,d/r,Uncommon
 ,,,,,,,,
 [Gray],,,,,,,,
 Murder,AA1,G,Spell,Destroy a unit.,,,,Common
@@ -95,3 +96,4 @@ Your opponent plays with their hand revealed.
 At the beginning of the opponent's draw step, name a card. If the correct card is named gain 2 life.",4,4,u/l/r,Mythic
 "Navi, Nimble Sharpshooter",RRY1,,Unit,"Battlecry: Deal 2 damage.
 Whenever you play a card, teleport next to an enemy unit, deal 2 damage to it, and push them.",3,2,d/l/r,Mythic
+Uncertain Man,3 YP,,Unit,Whenever an odd number creature spell is cast this unit shifts up. Whenever an even number creature spell is cast this unit shifts down.,5,5,l/r,Rare
