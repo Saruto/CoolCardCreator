@@ -40,6 +40,10 @@ Instant Transmission,P1,P,Spell,Move a unit to any open cell.,,,,
 Drag em down,P3,P,Spell,"All units slide left. Then, all units slide down.",,,,Common
 Unbeknownst Theft,PP4,P,Spell,Gain control of target creature,,,,Rare
 Master of Trickery,PP4,P,Unit,"Whenever a unit enters the battlefield, swap its position with this unit.",5,7,u/l/r,Rare
+Calling in the boys,PX,Y,Spell,Dial X,,,,Uncommon
+Surprising reveal,PPX,P,Spell,"Dial X. If the dialed card draws you cards, return any number of enemy creatures to their owners hand, equal to the cards drawn this way",,,,Rare
+Switcheroo,PPP4,P,Spell,"Remove all friendly cards from the field, and all cards from your influence pile. Put all cards removed from this influence pile on to the field, and cast all spells. Put all cards removed from the field into your influence pile",,,,Rare
+Mutual Benefits,P2,P,Spell,"Each player looks at the top card of their library. You may add this card to your influence pile. Otherwise, draw a card.",,,,Uncommon
 ,,,,,,,,
 [Red],,,,,,,,
 Mad Lad,R,,Unit,,2,1,l/r,Common
@@ -62,6 +66,8 @@ Angry Riot man and friends,R2,G,Unit,Battlecry: Gains +1 attack for each unit yo
 Ouchie Wowchie,R3,R,Unit,Deathrattle: This unit deals 6 damage to it's controller.,6,1,r,Common
 I'M SO FUCKING ANGRY AAAA,R2,R,Spell,Target unit gets +4/-2 until end of turn.,,,,Common
 Spawner of boys,R,R,Unit,At the end of your turn if you control an odd number of creatures you may place a 1/1 rioter that attacks left and right,1,1,d/r,Uncommon
+Firesprayer,R3,R,Unit,Swiftness. Whenever this unit kills another target it may deal 2 damage to any target,2,3,l/r,Uncommon
+Rally Man,RR1,R,Unit,Creatures you control have swiftness,2,2,u/r,Rare
 ,,,,,,,,
 [Gray],,,,,,,,
 Murder,AA1,G,Spell,Destroy a unit.,,,,Common
@@ -71,11 +77,15 @@ Mind Infiltrator,A4,A,Unit,Battlecry: Target player discards a card.,3,2,u/d,Com
 Cripple,A,A,Spell,Destroy a unit with attack or health 1 or less.,,,,Common
 Divine-Nation,A2,A,Spell,Draw two cards.,,,,Common
 Mega Divine-Nation,AA3,A,Spell,Draw three Cards.,,,,Common
+Sneaky Trap,A,A,Spell,The next spell you play this turn becomes a trap. Reduce it's cost by 3,,,,Rare
 ,,,,,,,,
 [Green],,,,,,,,
 Embiggen,G,G,Spell,Target unit gets +3/+3.,,,,Common
 Boisterous Elf,G2,G,Unit,Battlecry: Another friendly unit gets +2/+2 until end of turn.,2,2,r/d,Common
 Nature Spreads,G,G,Spell,Summon two 1/1 nature tokens (To the left and right of eachother I guess),,,,Common
+Joined together,GG4,G,Unit,Symbiotic: Draw a card,2,2,u/d,Rare
+Raging Dino,G4,R,Unit,Wild,4,4,u/d/r,Common
+Special Favors,G1,G,Spell,You may play an extra influence this turn. Draw a card,,,,Common
 ,,,,,,,,
 [Yellow],,,,,,,,
 Stun Unit,Y3,Y,Unit,Battlecry: Target unit can't attack until your next turn.,2,4,l/r,Uncommon
@@ -84,10 +94,13 @@ Strong Boy,Y1,Y,Unit,,3,2,d/l,Common
 Call in the boys,Y2,G,Spell,Draw two units.,,,,Common
 Mind Hacker,Y4,P,Unit,Battlecry: Gain control of a unit and give it swiftness until end of turn.,2,3,u/d/l,Uncommon
 Peacekeeper,Y1,P,Unit,Battlecry: Prevent all damage a unit would deal during the next combat step.,2,2,u/l,Uncommon
-Sneaky Booter,4Y,Y,Unit,Battlecry: Return a unit to its owner's hand.,3,4,u/d/l,Common
-Rough Grabber,3Y,Y,Unit,Battlecry: Target unit can't attack until this unit dies.,3,3,d/l/r,Common
-Big Hacker,5Y,Y,Unit,Battlecry: Area 2 - Units can't attack until this unit dies.,4,4,u/d/r,Common
-Tricky Swapper,3Y,Y,Unit,Battlecry: Swap this unit's position with any other target unit.,2,2,u/l/r,Common
+Sneaky Booter,Y4,Y,Unit,Battlecry: Return a unit to its owner's hand.,3,4,u/d/l,Common
+Rough Grabber,Y3,Y,Unit,Battlecry: Target unit can't attack until this unit dies.,3,3,d/l/r,Common
+Big Hacker,Y5,Y,Unit,Battlecry: Area 2 - Units can't attack until this unit dies.,4,4,u/d/r,Common
+Tricky Swapper,Y3,Y,Unit,Battlecry: Swap this unit's position with any other target unit.,2,2,u/l/r,Common
+Recruiter man,YY3,Y,Unit,Battlecry: Dial 4,4,5,l/r,Rare
+Healthy Man,YY2,Y,Unit,When you gain life you gain twice as much life instead. Symbotic: Gain 2 life,1,5,u/r,Rare
+Friendly Help,Y1,Y,Spell,"Return target friendly unit to it's owners hand. When you recast this unit it gains ""Battlecry: draw a unit""",,,,Common
 ,,,,,,,,
 [Multicolor],,,,,,,,
 Big boy revelation,AP5,A,Spell,Gain 7 life. Draw 3 cards.,,,,Mythic
@@ -97,3 +110,4 @@ At the beginning of the opponent's draw step, name a card. If the correct card i
 "Navi, Nimble Sharpshooter",RRY1,,Unit,"Battlecry: Deal 2 damage.
 Whenever you play a card, teleport next to an enemy unit, deal 2 damage to it, and push them.",3,2,d/l/r,Mythic
 Uncertain Man,3 YP,,Unit,Whenever an odd number creature spell is cast this unit shifts up. Whenever an even number creature spell is cast this unit shifts down.,5,5,l/r,Rare
+Sudden disappearance,AP,A,Spell,"Trap: return this creature to its owners hand, then that player discards a card",,,,
