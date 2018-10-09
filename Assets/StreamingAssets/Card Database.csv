@@ -95,6 +95,11 @@ Joined together,GG4,G,Unit,Symbiotic: Draw a card,2,2,u/d,Rare
 Raging Dino,G4,R,Unit,Wild,4,4,u/d/r,Common
 Special Favors,G1,G,Spell,You may play an extra influence this turn. Draw a card,,,,Common
 Green Friend,3GG,G,Unit,Battlecry: Choose another Unit. If it's green put 2 +1/+1 counters on it. If it's purple this creature deals 2 damage to the targeted creature,4,1,l/r,Rare
+Strong buffman,GG1,G,Unit,Symbiotic: +1/+1 counter,1,1,u/d,Common
+Bringer of Strength,G3,G,Unit,Symbiotic: Gain 3 life,3,3,l/r,Common
+Strength for friends,G2,G,Unit,Put a +1/+1 counter on an adjacent creature,2,2,u/r,Common
+Burley Boy,GG4,R,Unit,Wild,6,6,u/d/r,Common
+Godly Ascendant,G4,G,Unit,"Creatures with +1/+1 counters on them can't be reduced below 0 life. If a +1/+1 counter would be placed on this creature, instead draw a card",4,4,l/r,Rare
 ,,,,,,,,
 [Yellow],,,,,,,,
 Stun Unit,Y3,Y,Unit,Battlecry: Target unit can't attack until your next turn.,2,4,l/r,Uncommon
@@ -116,6 +121,7 @@ Repeat Offender,2Y,Y,Unit,Dial 3. If you dial you may put a card from your hand 
 Friendly Gangster,2YY,Y,Unit,Whenever you Dial a card this creature gets a +1/+1 counter,3,3,u/d/r,Uncommon
 Strength in Numbers,YY,Y,Spell,Dial X where X is the number of creatures you control,,,,Common
 Frontline shooter,2Y,Y,Unit,You may put a unit you control on the battlefield into your influence pile,,,,Common
+Rusher,3Y,Y,Unit,Swiftness. Symbiotic: +1/+0 until end of turn,2,2,l/r,Common
 ,,,,,,,,
 [Multicolor],,,,,,,,
 Big boy revelation,AP5,A,Spell,Gain 7 life. Draw 3 cards.,,,,Mythic
