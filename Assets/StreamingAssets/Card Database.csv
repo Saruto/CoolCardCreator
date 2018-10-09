@@ -86,6 +86,10 @@ Divine-Nation,A2,A,Spell,Draw two cards.,,,,Common
 Mega Divine-Nation,AA3,A,Spell,Draw three Cards.,,,,Common
 Sneaky Trap,A,A,Spell,The next spell you play this turn becomes a trap. Reduce it's cost by 3,,,,Rare
 Picky Lord,AA3,A,Unit,"Battlecry: Choose another creature. If it's gray sacrifice it and draw cards equal to it's power, if it's yellow destroy it",1,3,l/r,Rare
+"Grow up, and grow out",A,A,Spell,Target creature gets +1/+1 and Cripple until end of turn,,,,Common
+"Destroy, and boy",AA2,A,Spell,"Destroy target unit, then Dial X, where X is the destroyed creatures power",,,,Uncommon
+Destroy boy,AA,A,Spell,Destroy target unit who attacks in 2 directions,,,,Common
+Secret Keeper,A,A,Unit,"Battlecry: If this unit triggers a trap, you may choose the target for the trap, instead of it targeting this minion",1,2,l/r,Common
 ,,,,,,,,
 [Green],,,,,,,,
 Embiggen,G,G,Spell,Target unit gets +3/+3.,,,,Common
@@ -100,6 +104,8 @@ Bringer of Strength,G3,G,Unit,Symbiotic: Gain 3 life,3,3,l/r,Common
 Strength for friends,G2,G,Unit,Put a +1/+1 counter on an adjacent creature,2,2,u/r,Common
 Burley Boy,GG4,R,Unit,Wild,6,6,u/d/r,Common
 Godly Ascendant,G4,G,Unit,"Creatures with +1/+1 counters on them can't be reduced below 0 life. If a +1/+1 counter would be placed on this creature, instead draw a card",4,4,l/r,Rare
+Big boy lover,G3,G,Unit,"Units with power 4 or greater cost 2 less to cast. When you cast a unit with power 4 or greater, draw a card",2,3,u/d,Rare
+Young Man,GG,G,Unit,"Pay GG: Choose one. Add an attack direction to this unit, or put a +1/+1 counter on this unit",3,3,u,Rare
 ,,,,,,,,
 [Yellow],,,,,,,,
 Stun Unit,Y3,Y,Unit,Battlecry: Target unit can't attack until your next turn.,2,4,l/r,Uncommon
