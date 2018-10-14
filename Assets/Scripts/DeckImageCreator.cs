@@ -13,6 +13,23 @@ public class DeckImageCreator : MonoBehaviour {
 	// The camera that's currently rendering the deck.
 	[SerializeField] Camera DeckRendererCamera;
 
+	// Should we save to the Project folder path? Or to the AppData folder?
+	enum SaveLocation { ProjectFolder, AppDataFolder }
+	[SerializeField] SaveLocation SaveDeckLocation;
+
+	// The root folder containing all decks.
+	static string DIRECTORY_PATH;
+
+
+	// --- Awake --- //
+	void Awake() {
+		if(SaveDeckLocation == SaveLocation.ProjectFolder) {
+			DIRECTORY_PATH = Application.dataPath + "/Created Decks/";
+		} else {
+			DIRECTORY_PATH = Application.persistentDataPath + "/Created Decks/";
+		}
+	}
+
 
 	// ----------- Button Callbacks ----------- //
 	// Saves the deck that is currently being rendered by the DeckRendererCamera.
@@ -28,7 +45,7 @@ public class DeckImageCreator : MonoBehaviour {
 			Debug.LogWarning("No deck in the renderer canvas! Please press one of the Deck Creation options first!");
 			return;
 		}
-		string PATH = Application.persistentDataPath + "/" + deckName + " - " + DateTime.Now.ToString("MM-dd-yyyy-HH-mm-ss") + ".png";
+		string PATH = DIRECTORY_PATH + deckName + " - " + DateTime.Now.ToString("MM-dd-yyyy-HH-mm-ss") + ".png";
 		// Create texture from the DeckRendererCamera's target texture.
 		Texture2D texture = new Texture2D(4000, 2800, TextureFormat.ARGB32, false);
 		RenderTexture.active = DeckRendererCamera.targetTexture;
