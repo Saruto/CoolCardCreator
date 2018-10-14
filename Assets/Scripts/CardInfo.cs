@@ -19,7 +19,9 @@ public enum Rarity { Common, Uncommon, Rare, Mythic }
 [IgnoreFirst(1)]
 [IgnoreEmptyLines()]
 public class Card {
+	[FieldQuoted('"', QuoteMode.OptionalForBoth, MultilineMode.AllowForRead)]
 	public string CardName;
+
 	public string ManaCost;
 
 	[FieldNullValue(typeof(char), " ")]
