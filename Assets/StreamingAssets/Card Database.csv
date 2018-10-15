@@ -52,6 +52,7 @@ Secret Keeper,2PP,P,Unit,"Whenever you dial a card, you may return a creature to
 Body Guard,2P,P,Unit,Dial 4,1,4,u/r,Common
 There and back again,PX,P,Spell,"Dial X, then return the card to your influence pile at the end of the turn",,,,Rare
 Dial em' in,PP,P,Spell,You may cast cards in your influence pile as though they were in your hand this turn,,,,Rare
+Silvertongue Agent,2P,R,Unit,"Battlecry: Remove target unit from the game. Return it to the field at the end of your turn. If you controlled that unit, pressure.",2,1,u/r,Uncommon
 ,,,,,,,,
 [Red],,,,,,,,
 Mad Lad,R,,Unit,,2,1,l/r,Common
@@ -75,6 +76,8 @@ I'M SO FUCKING ANGRY AAAA,R2,R,Spell,Target unit gets +4/-2 until end of turn.,,
 Spawner of boys,R,R,Unit,At the end of your turn if you control an odd number of creatures you may place a 1/1 rioter that attacks left and right,1,1,d/r,Uncommon
 Firesprayer,R3,R,Unit,Swiftness. Whenever this unit kills another target it may deal 2 damage to any target,2,3,l/r,Uncommon
 Rally Man,RR1,R,Unit,Creatures you control have swiftness,2,2,u/r,Rare
+Fist to Face,R,P,Spell,"Pressure.
+Deal 1 damage.",,,,Common
 ,,,,,,,,
 [Gray],,,,,,,,
 Murder,AA1,G,Spell,Destroy a unit.,,,,Common
@@ -140,3 +143,7 @@ Uncertain Man,3 YP,,Unit,Whenever an odd number creature spell is cast this unit
 Sudden disappearance,AP,A,Spell,"Trap: return this creature to its owners hand, then that player discards a card",,,,
 "Voltrath, Master of the shadows",AP 4,P,Unit,At the beginning of each turn you may move a card from your influence pile to your hand. Otherwise draw a card,4,5,u/l/r,Mythic
 Bloom of Boys,GY,G,Spell,"This turn creatures on the field may act as though they're in the influence pile. If you use them this way, they don't attack this turn",,,,
+Molotov Bartender,PR3,R,Unit,Pressure. Pressure.,2,2,u/l/r,Rare
+Rising Flames,PR,P,Spell,Deal 2 damage to a unit. Pressure.,,,,Common
+Frothing Fighter,PR,R,Unit,Gain +1 attack everytime you play a card.,0,3,u/r,Uncommon
+Third-Street Saboteur,PR,P,Unit,Battlecry: Pressure.,2,2,u/l,Uncommon
