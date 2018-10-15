@@ -48,11 +48,11 @@ Hidden Agenda,PP3,P,Spell,Take an extra turn after this one,,,,Rare
 Bearer of bad news,PP4,P,Unit,Units can only attack left and right,4,5,l/r,Rare
 Secret Admierer,P3,P,Unit,Trap: Return the trapped unit to it's owners hand,3,4,u/d,Common
 Dial up,PPP,P,Spell,Pay X life: Dial X where X is the life payed,,,,Rare
-Secret Keeper,2PP,P,Unit,"Whenever you dial a card, you may return a creature to it's owners hand",3,3,l/r,Uncommon
-Body Guard,2P,P,Unit,Dial 4,1,4,u/r,Common
+Secret Keeper,PP2,P,Unit,"Whenever you dial a card, you may return a creature to it's owners hand",3,3,l/r,Uncommon
+Body Guard,P2,P,Unit,Dial 4,1,4,u/r,Common
 There and back again,PX,P,Spell,"Dial X, then return the card to your influence pile at the end of the turn",,,,Rare
 Dial em' in,PP,P,Spell,You may cast cards in your influence pile as though they were in your hand this turn,,,,Rare
-Silvertongue Agent,2P,R,Unit,"Battlecry: Remove target unit from the game. Return it to the field at the end of your turn. If you controlled that unit, pressure.",2,1,u/r,Uncommon
+Silvertongue Agent,P2,R,Unit,"Battlecry: Remove target unit from the game. Return it to the field at the end of your turn. If you controlled that unit, pressure.",2,1,u/r,Uncommon
 ,,,,,,,,
 [Red],,,,,,,,
 Mad Lad,R,,Unit,,2,1,l/r,Common
@@ -101,7 +101,7 @@ Nature Spreads,G,G,Spell,Summon two 1/1 nature tokens (To the left and right of 
 Joined together,GG4,G,Unit,Symbiotic: Draw a card,2,2,u/d,Rare
 Raging Dino,G4,R,Unit,Wild,4,4,u/d/r,Common
 Special Favors,G1,G,Spell,You may play an extra influence this turn. Draw a card,,,,Common
-Green Friend,3GG,G,Unit,Battlecry: Choose another Unit. If it's green put 2 +1/+1 counters on it. If it's purple this creature deals 2 damage to the targeted creature,4,1,l/r,Rare
+Green Friend,GG3,G,Unit,Battlecry: Choose another Unit. If it's green put 2 +1/+1 counters on it. If it's purple this creature deals 2 damage to the targeted creature,4,1,l/r,Rare
 Strong buffman,GG1,G,Unit,Symbiotic: +1/+1 counter,1,1,u/d,Common
 Bringer of Strength,G3,G,Unit,Symbiotic: Gain 3 life,3,3,l/r,Common
 Strength for friends,G2,G,Unit,Put a +1/+1 counter on an adjacent creature,2,2,u/r,Common
@@ -126,8 +126,8 @@ Healthy Man,YY2,Y,Unit,When you gain life you gain twice as much life instead. S
 Friendly Help,Y1,Y,Spell,"Return target friendly unit to it's owners hand. When you recast this unit it gains ""Battlecry: draw a unit""",,,,Common
 "Gregory, the little boy",1Y,Y,Unit,Dial 4,1,1,l/r,Common
 Pack Leader,YY,Y,Unit,Dial 3,2,2,u/d/r,Uncommon
-Repeat Offender,2Y,Y,Unit,Dial 3. If you dial you may put a card from your hand into your influence pile.,2,2,l/r,Common
-Friendly Gangster,2YY,Y,Unit,Whenever you Dial a card this creature gets a +1/+1 counter,3,3,u/d/r,Uncommon
+Repeat Offender,Y2,Y,Unit,Dial 3. If you dial you may put a card from your hand into your influence pile.,2,2,l/r,Common
+Friendly Gangster,YY2,Y,Unit,Whenever you Dial a card this creature gets a +1/+1 counter,3,3,u/d/r,Uncommon
 Strength in Numbers,YY,Y,Spell,Dial X where X is the number of creatures you control,,,,Common
 Frontline shooter,2Y,Y,Unit,You may put a unit you control on the battlefield into your influence pile,,,,Common
 Rusher,3Y,Y,Unit,Swiftness. Symbiotic: +1/+0 until end of turn,2,2,l/r,Common
@@ -139,11 +139,11 @@ Your opponent plays with their hand revealed.
 At the beginning of the opponent's draw step, name a card. If the correct card is named gain 2 life.",4,4,u/l/r,Mythic
 "Navi, Nimble Sharpshooter",RRY1,,Unit,"Battlecry: Deal 2 damage.
 Whenever you play a card, teleport next to an enemy unit, deal 2 damage to it, and push them.",3,2,d/l/r,Mythic
-Uncertain Man,3 YP,,Unit,Whenever an odd number creature spell is cast this unit shifts up. Whenever an even number creature spell is cast this unit shifts down.,5,5,l/r,Rare
+Uncertain Man,YP3,,Unit,Whenever an odd number creature spell is cast this unit shifts up. Whenever an even number creature spell is cast this unit shifts down.,5,5,l/r,Rare
 Sudden disappearance,AP,A,Spell,"Trap: return this creature to its owners hand, then that player discards a card",,,,
-"Voltrath, Master of the shadows",AP 4,P,Unit,At the beginning of each turn you may move a card from your influence pile to your hand. Otherwise draw a card,4,5,u/l/r,Mythic
+"Voltrath, Master of the shadows",AP4,P,Unit,At the beginning of each turn you may move a card from your influence pile to your hand. Otherwise draw a card,4,5,u/l/r,Mythic
 Bloom of Boys,GY,G,Spell,"This turn creatures on the field may act as though they're in the influence pile. If you use them this way, they don't attack this turn",,,,
 Molotov Bartender,PR3,R,Unit,Pressure. Pressure.,2,2,u/l/r,Rare
 Rising Flames,PR,P,Spell,Deal 2 damage to a unit. Pressure.,,,,Common
 Frothing Fighter,PR,R,Unit,Gain +1 attack everytime you play a card.,0,3,u/r,Uncommon
-Third-Street Saboteur,PR,P,Unit,Battlecry: Pressure.,2,2,u/l,Uncommon
+Third-Street Saboteur,PR,P,Unit,Battlecry: Pressure.,1,2,u/l,Uncommon
