@@ -50,7 +50,7 @@ Secret Admierer,P3,P,Unit,Trap: Return the trapped unit to it's owners hand,3,4,
 Dial up,PPP,P,Spell,Pay X life: Dial X where X is the life payed,,,,Rare
 Secret Keeper,PP2,P,Unit,"Whenever you dial a card, you may return a creature to it's owners hand",3,3,l/r,Uncommon
 Body Guard,P2,P,Unit,Dial 4,1,4,u/r,Common
-There and back again,PX,P,Spell,"Dial X, then return the card to your influence pile at the end of the turn",,,,Rare
+There and back again,PX,P,Spell,"Dial X, If it's a creature, it gains swiftness. return the card to your influence pile at the end of the turn (Even if it was put in the graveyard)",,,,Rare
 Dial em' in,PP,P,Spell,You may cast cards in your influence pile as though they were in your hand this turn,,,,Rare
 Silvertongue Agent,P2,R,Unit,"Battlecry: Remove target unit from the game. Return it to the field at the end of your turn. If you controlled that unit, pressure.",2,1,u/r,Uncommon
 ,,,,,,,,
