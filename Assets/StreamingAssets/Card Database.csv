@@ -129,7 +129,7 @@ Pack Leader,YY,Y,Unit,Dial 3,2,2,u/d/r,Uncommon
 Repeat Offender,Y2,Y,Unit,Dial 3. If you dial you may put a card from your hand into your influence pile.,2,2,l/r,Common
 Friendly Gangster,YY2,Y,Unit,Whenever you Dial a card this creature gets a +1/+1 counter,3,3,u/d/r,Uncommon
 Strength in Numbers,YY,Y,Spell,Dial X where X is the number of creatures you control,,,,Common
-Frontline shooter,2Y,Y,Unit,You may put a unit you control on the battlefield into your influence pile,,,,Common
+Frontline shooter,2Y,Y,Unit,You may put a unit you control on the battlefield into your influence pile,2,2,l/r,Common
 Rusher,3Y,Y,Unit,Swiftness. Symbiotic: +1/+0 until end of turn,2,2,l/r,Common
 ,,,,,,,,
 [Multicolor],,,,,,,,
