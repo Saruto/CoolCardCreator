@@ -93,11 +93,16 @@ Picky Lord,AA3,A,Unit,"Battlecry: Choose another creature. If it's gray sacrific
 "Destroy, and boy",AA2,A,Spell,"Destroy target unit, then Dial X, where X is the destroyed creatures power",,,,Uncommon
 Destroy boy,AA,A,Spell,Destroy target unit who attacks in 2 directions,,,,Common
 Secret Keeper,A,A,Unit,"Battlecry: If this unit triggers a trap, you may choose the target for the trap, instead of it targeting this minion",1,2,l/r,Common
+Downsize,A1,A,Spell,Target unit gets -0/-3 until the end of turn.,,,,Common
+Flunky Revolt,AA2,G,Spell,Destroy target unit. Summon two 0/2 flunkboy tokens.,,,,Uncommon
+Ultra-Assassin,AA3,G,Unit,Symbiotic: Destroy target unit.,1,1,u/d/r,Rare
+Dredge Wall,A1,A,Spell,"Enchant Area 3.
+Units in the area gain -1/-1.",,,,Common
 ,,,,,,,,
 [Green],,,,,,,,
 Embiggen,G,G,Spell,Target unit gets +3/+3.,,,,Common
 Boisterous Elf,G2,G,Unit,Battlecry: Another friendly unit gets +2/+2 until end of turn.,2,2,r/d,Common
-Nature Spreads,G,G,Spell,Summon two 1/1 nature tokens (To the left and right of eachother I guess),,,,Common
+Nature Spreads,G1,G,Spell,Summon two 1/1 nature tokens (To the left and right of eachother I guess),,,,Common
 Joined together,GG4,G,Unit,Symbiotic: Draw a card,2,2,u/d,Rare
 Raging Dino,G4,R,Unit,Wild,4,4,u/d/r,Common
 Special Favors,G1,G,Spell,You may play an extra influence this turn. Draw a card,,,,Common
@@ -109,6 +114,26 @@ Burley Boy,GG4,R,Unit,Wild,6,6,u/d/r,Common
 Godly Ascendant,G4,G,Unit,"Creatures with +1/+1 counters on them can't be reduced below 0 life. If a +1/+1 counter would be placed on this creature, instead draw a card",4,4,l/r,Rare
 Big boy lover,G3,G,Unit,"Units with power 4 or greater cost 2 less to cast. When you cast a unit with power 4 or greater, draw a card",2,3,u/d,Rare
 Young Man,GG,G,Unit,"Pay GG: Choose one. Add an attack direction to this unit, or put a +1/+1 counter on this unit",3,3,u,Rare
+Mindless Flowers,G,G,Spell,Summon two 0/1 flower boy tokens.,,,,Common
+Gerrymandered Power,G4,G,Spell,"Enchant Column 1.
+Units in the area gain +3/+3, and also gain the l/r attack directions.",,,,Uncommon
+Isolation Chamber,G2,P,Spell,"Enchant Area 3.
+Units in the area cannot be the targets of spells or abilities their owner's opponents control.",,,,Uncommon
+Perfected Laboratory,GG4,G,Unit,"At the beginning of your turn, put a charge counter on this card. Then, summon a number of abomination tokens equal to the number of charge tokens on this card.",0,5,,Rare
+Power Vacuum,G2,G,Spell,"Enchant Area 4.
+Units in the area gain +1/+1 for each Enchantment that they're currently affected by.",,,,Rare
+Stasis,G1,P,Spell,"Prevent all combat damage that would be dealt until the beginning of your next turn.
+Enchantments cannot be removed until the beginning of your next turn.",,,,Common
+Biological Perfector,GG,G,Unit,Tokens you control gain +1/+1.,1,2,u/d,Uncommon
+Power Pillar,G1,G,Unit,Put a -0/-1 counter on this card: Gain 1 infulence of any color this turn. Can only activate this once per turn.,0,5,u,Uncommon
+Cruel Experiment,G1,A,Spell,Destroy target unit that you control. Summon 4 0/1 slime boy tokens.,,,,Uncommon
+Big Boy Soul Rage,GGG3,G,Spell,"Units you control gain +X/+X and swiftness until the end of turn, where X is the number of creatures you control.",,,,Rare
+Biotwins,G2,G,Spell,"Summon 2 0/1 slime tokens with ""Symbiotic: Gain +1/+1"".",,,,Uncommon
+Rampage Arena,GG3,G,Spell,"Battlecry: Shift all units down.
+Enchant Row 2.
+Units in the area gain +3/+0, and gain u/d/l/r attack directions.",,,,Rare
+Shower of Power,G1,G,Spell,Put a +1/+1 counter on all units.,,,,Uncommon
+Extreme Channel,XG,G,Spell,Summon X 1/1 squishy slimeboys.,,,,Rare
 ,,,,,,,,
 [Yellow],,,,,,,,
 Stun Unit,Y3,Y,Unit,Battlecry: Target unit can't attack until your next turn.,2,4,l/r,Uncommon
@@ -147,3 +172,9 @@ Molotov Bartender,PR3,R,Unit,Pressure. Pressure.,2,2,u/l/r,Rare
 Rising Flames,PR,P,Spell,Deal 2 damage to a unit. Pressure.,,,,Common
 Frothing Fighter,PR,R,Unit,Gain +1 attack everytime you play a card.,0,3,u/r,Uncommon
 Third-Street Saboteur,PR,P,Unit,Battlecry: Pressure.,1,2,u/l,Uncommon
+At Any Cost,AG4,G,Spell,"Enchant Area 3. Battlecry: Place 3 0/2 civilian tokens onto the battlefield.
+Whenever a unit in the area dies, that unit's owner draws two cards.",,,,Rare
+Congegration of Power,AG2,A,Spell,Shift all of your units upwards. Then shift them to the right.,,,,Uncommon
+"Relish Norn, Grand Condiment",AG4,A,Unit,"Units you control gain +1/+1.
+Units you don't control gain -1/-1.
+Whenever a unit you control dies, draw a card and lose 2 life.",4,4,,Mythic
