@@ -53,6 +53,16 @@ Body Guard,P2,P,Unit,Dial 4,1,4,u/r,Common
 There and back again,PX,P,Spell,"Dial X, If it's a creature, it gains swiftness. return the card to your influence pile at the end of the turn (Even if it was put in the graveyard)",,,,Rare
 Dial em' in,PP,P,Spell,You may cast cards in your influence pile as though they were in your hand this turn,,,,Rare
 Silvertongue Agent,P2,R,Unit,"Battlecry: Remove target unit from the game. Return it to the field at the end of your turn. If you controlled that unit, pressure.",2,1,u/r,Uncommon
+Ancestrally trapped,P,A,Spell,Trap: Draw 3 cards,,,,Common
+Nodes of Power,PP,A,Spell,Enchant 3: At the beginning of your turn each player sacrifices a creature they control,,,,Rare
+Bound by thoughts,P2,P,Spell,Enchant 3: Units can only be played inside enchanted zone,,,,Rare
+Unbound Spy,P1,P,Unit,Battlecry: Trap: Destroy target unit,1,3,l/r,Uncommon
+Spinner boy,P1,P,Unit,3P Exhaust this creature: Rotate a unit 90 degrees clockwise,2,2,r/u,Common
+Big boy,P3,P,Unit,Battlecry: Return target unit an opponent controls to its owners hand,0,5,r/u,Uncommon
+Wall of whispers,P4,P,Unit,Dial Spell,0,4,l/d,Common
+Named bounce,PP,P,Spell,Trap: Return trapped unit to it's owners hand. Creatures with the same name as the returned unit can't be cast next turn,,,,Rare
+Back to thought,P2,P,Spell,"Trap 2: When this trap triggers, put all units in the trapped zone on top of their owners library",,,,Uncommon
+Man of trap,P3,A,Unit,Whenever a trap is revealed you gain two life and pressure,2,5,l/r,Rare
 ,,,,,,,,
 [Red],,,,,,,,
 Mad Lad,R,,Unit,,2,1,l/r,Common
@@ -98,6 +108,11 @@ Flunky Revolt,AA2,G,Spell,Destroy target unit. Summon two 0/2 flunkboy tokens.,,
 Ultra-Assassin,AA3,G,Unit,Symbiotic: Destroy target unit.,1,1,u/d/r,Rare
 Dredge Wall,A1,A,Spell,"Enchant Area 3.
 Units in the area gain -1/-1.",,,,Common
+Boy of power,AA,A,Unit,Battlecry: Lose 1 life and draw a card,2,1,l/r,Common
+Sacrifice of all,A2,A,Spell,"Trap 2: When this trap is triggered, destroy all units in the trapped area",,,,Rare
+Knowledge boy,A3,A,Unit,Traps your opponents control are visable to you,4,5,l/d,Rare
+Major pitfall,A,A,Spell,Target unit gets -X/-X where X is the number of traps on the field,,,,Common
+Bad boy,A1,A,Unit,A3 Exhaust this unit: Target creature gets -2/-2 until end of turn,2,2,l/r,Common
 ,,,,,,,,
 [Green],,,,,,,,
 Embiggen,G,G,Spell,Target unit gets +3/+3.,,,,Common
@@ -178,3 +193,4 @@ Congegration of Power,AG2,A,Spell,Shift all of your units upwards. Then shift th
 "Relish Norn, Grand Condiment",AG4,A,Unit,"Units you control gain +1/+1.
 Units you don't control gain -1/-1.
 Whenever a unit you control dies, draw a card and lose 2 life.",4,4,,Mythic
+Aetherman,PA4,P,Unit,Pay PB and Exhaust: Move aetherman to target spot on the board. Pay P aetherman attacks L/R. Pay A: aetherman attacks U/D,6,6,l/r,Mythic
