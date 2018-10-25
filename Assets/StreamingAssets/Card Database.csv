@@ -135,8 +135,8 @@ Units in the area gain +3/+3, and also gain the l/r attack directions.",,,,Uncom
 Isolation Chamber,G2,P,Spell,"Enchant Area 3.
 Units in the area cannot be the targets of spells or abilities their owner's opponents control.",,,,Uncommon
 Perfected Laboratory,GG4,G,Unit,"At the beginning of your turn, put a charge counter on this card. Then, summon a number of abomination tokens equal to the number of charge tokens on this card.",0,5,,Rare
-Power Vacuum,G2,G,Spell,"Enchant Area 4.
-Units in the area gain +1/+1 for each Enchantment that they're currently affected by.",,,,Rare
+Power Vacuum,G4,G,Spell,"Enchant Area 4.
+Units you control in the area gain +1/+1 for each Enchantment that they're currently affected by.",,,,Rare
 Stasis,G1,P,Spell,"Prevent all combat damage that would be dealt until the beginning of your next turn.
 Enchantments cannot be removed until the beginning of your next turn.",,,,Common
 Biological Perfector,GG,G,Unit,Tokens you control gain +1/+1.,1,2,u/d,Uncommon
@@ -149,6 +149,7 @@ Enchant Row 2.
 Units in the area gain +3/+0, and gain u/d/l/r attack directions.",,,,Rare
 Shower of Power,G1,G,Spell,Put a +1/+1 counter on all units.,,,,Uncommon
 Extreme Channel,XG,G,Spell,Summon X 1/1 squishy slimeboys.,,,,Rare
+Power for all,GG,G,Spell,Enchant area 2: Units get +1/+1,,,,Uncommon
 ,,,,,,,,
 [Yellow],,,,,,,,
 Stun Unit,Y3,Y,Unit,Battlecry: Target unit can't attack until your next turn.,2,4,l/r,Uncommon
