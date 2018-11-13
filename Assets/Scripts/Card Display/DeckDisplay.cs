@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 using System;
+using UnityEngine.EventSystems;
 
 public class DeckDisplay : MonoBehaviour {
 
@@ -56,7 +57,8 @@ public class DeckDisplay : MonoBehaviour {
             // Loop creating new deck card prefabs until the number of those we have equals our decklist count
             for (int i = 0; i < length; i++)
             {
-                GameObject card = Instantiate(cardDeckImage, transform);
+                GameObject deckListCardVisual = Instantiate(cardDeckImage, transform);
+                deckListCardVisual.GetComponent<Button>().onClick.AddListener(RemoveCard);
             }
         }
         else if(transform.childCount > CompactedDeckList.Count)
@@ -65,10 +67,10 @@ public class DeckDisplay : MonoBehaviour {
             // Loop creating new deck card prefabs until the number of those we have equals our decklist count
             for (int i = 0; i < length; i++)
             {
-                Destroy(transform.GetChild(i));
+                DestroyImmediate(transform.GetChild(0).gameObject);
+                
             }
         }
-
         // Create, and rename prefabs based on the new card sort
         for (int i = 0; i < CompactedDeckList.Count; i++)
         {
@@ -104,6 +106,15 @@ public class DeckDisplay : MonoBehaviour {
 
     public void RemoveCard()
     {
-
+        for (int i = 0; i < deckList.Count; i++)
+        {
+            if(EventSystem.current.currentSelectedGameObject.transform.GetChild(0).GetComponent<Text>().text == deckList[i].CardName)
+            {
+                deckList.RemoveAt(i);
+                UpdateDeckVisuals();
+                break;
+            }
+        }
     }
+    
 }
