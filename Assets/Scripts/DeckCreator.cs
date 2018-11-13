@@ -117,7 +117,7 @@ public class DeckCreator : MonoBehaviour {
 		GameObject CardContainer = Instantiate(CardContainerPrefab, DeckRendererCanvas.transform);
 		CardContainer.name = deckName + " - " + DateTime.Now;
 		
-		// Create a prefab for each card using the card prefab template.
+		// Create an object for each card using the card prefab template.
 		for(int i = 0; i < deck.Length; i++) {
 			Card card = deck[i];
 			CardScript cardScript = Instantiate(CardPrefab, CardContainer.transform).GetComponent<CardScript>();
