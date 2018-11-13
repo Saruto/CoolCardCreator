@@ -55,10 +55,16 @@ public class CardDisplay : MonoBehaviour {
         {
             length = CardImages.Length;
         }
+        GenerateCardImages(length);
+    }
+
+    void GenerateCardImages(int length)
+    {
         for (int i = 0; i < length; i++)
         {
             // Show the cards with their offset, incase we've pressed the arrows
             CardImages[i].transform.GetChild(0).GetComponent<Text>().text = parser.AllCards[i + offset].CardName;
+
         }
     }
 
