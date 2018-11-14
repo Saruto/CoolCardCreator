@@ -10,11 +10,18 @@ public class CardDisplay : MonoBehaviour {
 
     // Used for displaying the deck
     [SerializeField] GameObject deckDisplay;
+
+    [SerializeField] GameObject SearchBox;
+
+    // Used for searching, and narrowing down cards
+    List<Card> SearchedCards = new List<Card>();
     // Each card image
-    GameObject[] CardImages = new GameObject[8];
+    GameObject[] CardImages = new GameObject[OFFSET_VALUE];
 
     // Used for tracking the offset of cards, for displaying the cards in the card display. Offset by values of 8
     int offset = 0;
+    // Used for the offset value
+    const int OFFSET_VALUE = 8;
 
 	// Use this for initialization
 	void Start () {
@@ -27,33 +34,46 @@ public class CardDisplay : MonoBehaviour {
         {
             CardImages[i] = transform.GetChild(i).gameObject;
         }
+        ResetCardList();
         // Display the card names
         UpdateCards();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
 	}
+
+    // Clear and repopulate the list
+    void ResetCardList()
+    {
+        SearchedCards.Clear();
+        for (int i = 0; i < parser.AllCards.Length; i++)
+        {
+            SearchedCards.Add(parser.AllCards[i]);
+        }
+    }
 
     void UpdateCards()
     {
         int length;
 
-        // If this is true, we know we're at the last cards, so we shouldn't update anything when we move the offset
-        if(parser.AllCards.Length == offset)
+        // If the count is 
+        if(SearchedCards.Count < offset + OFFSET_VALUE)
         {
-            length = 0;
+            
+            length = SearchedCards.Count - offset;
+            for (int i = 0; i < OFFSET_VALUE - length; i++)
+            {
+                CardImages[OFFSET_VALUE - 1 - i].SetActive(false);
+            }
         }
-        // If the offset would be larger than the index of the cards, make it go to the max index
-        else if(parser.AllCards.Length < offset + 8)
-        {
-            length = ((8 + offset) - parser.AllCards.Length);
-        }
-        // Otherwise it's just equal to the lenght of card images (8)
         else
         {
-            length = CardImages.Length;
+            for (int i = 0; i < CardImages.Length; i++)
+            {
+                CardImages[i].SetActive(true);
+            }
+            length = OFFSET_VALUE;
         }
         GenerateCardImages(length);
     }
@@ -63,16 +83,16 @@ public class CardDisplay : MonoBehaviour {
         for (int i = 0; i < length; i++)
         {
             // Show the cards with their offset, incase we've pressed the arrows
-			Utility.Instance.ApplyCardInfoToCardObject(parser.AllCards[i + offset], CardImages[i].GetComponent<CardScript>());
+			Utility.Instance.ApplyCardInfoToCardObject(SearchedCards[i + offset], CardImages[i].GetComponent<CardScript>());
         }
     }
 
     public void CardsForwards()
     {
         // Only add to the offset if it wont make it bigger than our card list
-        if(offset + 8 < parser.AllCards.Length)
+        if(offset + OFFSET_VALUE < SearchedCards.Count)
         {
-            offset += 8;
+            offset += OFFSET_VALUE;
         }
             
         UpdateCards();
@@ -81,13 +101,13 @@ public class CardDisplay : MonoBehaviour {
     public void CardsBackwards()
     {
         // Make sure we don't make the offset less than zero
-        if(offset - 8 < 0)
+        if(offset - OFFSET_VALUE < 0)
         {
             offset = 0;
         }
         else
         {
-            offset -= 8;
+            offset -= OFFSET_VALUE;
         }
         UpdateCards();
 
@@ -107,7 +127,36 @@ public class CardDisplay : MonoBehaviour {
         if(index != -1)
         {
 
-            deckDisplay.GetComponent<DeckDisplay>().AddCard(parser.AllCards[offset + index]);
+            deckDisplay.GetComponent<DeckDisplay>().AddCard(SearchedCards[offset + index]);
         }
+    }
+
+    public void ValueChangeCheck()
+    {
+        if(SearchBox.GetComponent<InputField>().text == "")
+        {
+            ResetCardList();
+            UpdateCards();
+        }
+        else
+        {
+            ResetCardList();
+            RemoveCardsFromList(SearchBox.GetComponent<InputField>().text);
+        }
+    }
+
+    void RemoveCardsFromList(string typedValue)
+    {
+        // Reset the offset when removing cards
+        offset = 0;
+        foreach(Card card in SearchedCards.ToArray())
+        {
+            string cardname = card.CardName.ToLower();
+            if (!cardname.StartsWith(typedValue.ToLower()))
+            {
+                SearchedCards.Remove(card);
+            }
+        }
+        UpdateCards();
     }
 }
