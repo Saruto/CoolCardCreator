@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1468975132425466}
+  m_IsPrefabAsset: 1
+--- !u!1 &1468975132425466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4643653129845308}
+  - component: {fileID: 114926642485458212}
+  m_Layer: 0
+  m_Name: Utility Functions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4643653129845308
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1468975132425466}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114926642485458212
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1468975132425466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92fefa76746f6148b63035ddc2f8176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ManaSymbolPrefab: {fileID: 1467112865960074, guid: 8acf6a0279bf3904f9967f6fc27a49ac,
+    type: 2}
+  PurpleSymbol: {fileID: 21300000, guid: 0c4f09e22f256334fa75c2861c5b6b2c, type: 3}
+  RedSymbol: {fileID: 21300000, guid: 9b6a397e59419ac44af16b52caf7b768, type: 3}
+  GraySymbol: {fileID: 21300000, guid: 57c9b0d0a08895348ad64ba1a2b72448, type: 3}
+  GreenSymbol: {fileID: 21300000, guid: e817705e9c22db143aa4915ea9eb3207, type: 3}
+  YellowSymbol: {fileID: 21300000, guid: 86257fedb3a829a46ae42cda13731b06, type: 3}
+  NeutralSymbol: {fileID: 21300000, guid: 59f202fe5d83b5d4d8e8f8e7dbeb0ad6, type: 3}
+  AttackIconSprite: {fileID: 21300000, guid: 49275ee1927b4f647863a2db5b0a3075, type: 3}
+  HealthIconSprite: {fileID: 21300000, guid: 69fd478edc2e36649bd0bb3715f9ca00, type: 3}
+  TransparentSprite: {fileID: 21300000, guid: 4ee7eecfe4cb9cf40b20346a856ef43c, type: 3}

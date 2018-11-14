@@ -31,22 +31,24 @@ public class DeckCreator : MonoBehaviour {
 	// A prefab to use for creating the cards of.
 	[SerializeField] GameObject CardPrefab;
 
-	// Prefab for a mana symbol
-	[SerializeField] GameObject ManaSymbolPrefab;
-
-	// Prefabs for every mana symbol sprite
-	[SerializeField] Sprite PurpleSymbol;
-	[SerializeField] Sprite RedSymbol;
-	[SerializeField] Sprite GraySymbol;
-	[SerializeField] Sprite GreenSymbol;
-	[SerializeField] Sprite YellowSymbol;
-	[SerializeField] Sprite NeutralSymbol;
-	// Other Sprites
-	[SerializeField] Sprite TransparentSprite;
+	
+	
+	// Singleton Instance
+	public static DeckCreator Instance = null;
 
 
 
 	// ----------------------------------------- Methods ----------------------------------------- //
+	// --- Awake --- //
+	void Awake() {
+		// Make singleton
+		if(Instance == null) {
+			Instance = this;
+		} else {
+			Destroy(gameObject);
+		}
+	}
+
 	// --- Start --- //
 	void Start() {
 		Parser = GetComponent<CSVParser>();
@@ -122,67 +124,10 @@ public class DeckCreator : MonoBehaviour {
 			Card card = deck[i];
 			CardScript cardScript = Instantiate(CardPrefab, CardContainer.transform).GetComponent<CardScript>();
 			cardScript.gameObject.name = card.CardName;
-			// Set fields
-			cardScript.Background.color = DeckColorOptions[CurrentlySelectedColor].color;
-			cardScript.CardName.text = card.CardName;
-			cardScript.CardText.text = card.CardText;
-			// Mana
-			IEnumerable<char> manaSymbols = card.ManaCost.ToCharArray();
-			foreach(char symbol in manaSymbols) {
-				GameObject symbolIcon = Instantiate(ManaSymbolPrefab, cardScript.ManaCostLayout.transform);
-				switch(symbol) {
-				case 'P': symbolIcon.GetComponent<Image>().sprite = PurpleSymbol; break;
-				case 'R': symbolIcon.GetComponent<Image>().sprite = RedSymbol; break;
-				case 'A': symbolIcon.GetComponent<Image>().sprite = GraySymbol; break;
-				case 'G': symbolIcon.GetComponent<Image>().sprite = GreenSymbol; break;
-				case 'Y': symbolIcon.GetComponent<Image>().sprite = YellowSymbol; break;
-				default: 
-					symbolIcon.GetComponent<Image>().sprite = NeutralSymbol;
-					symbolIcon.GetComponentInChildren<Text>().text = symbol.ToString();
-					break;
-				}
-			}
-			// Land
-			if(card.LandType != ' ') {
-				GameObject symbolIcon = Instantiate(ManaSymbolPrefab, cardScript.LandLayout.transform);
-				switch(card.LandType) {
-				case 'P': symbolIcon.GetComponent<Image>().sprite = PurpleSymbol; break;
-				case 'R': symbolIcon.GetComponent<Image>().sprite = RedSymbol; break;
-				case 'A': symbolIcon.GetComponent<Image>().sprite = GraySymbol; break;
-				case 'G': symbolIcon.GetComponent<Image>().sprite = GreenSymbol; break;
-				case 'Y': symbolIcon.GetComponent<Image>().sprite = YellowSymbol; break;
-				}
-			}
-			// Attack/Health
-			if(card.Attack != -1) {
-				cardScript.AttackText.text = card.Attack.ToString();
-			} else {
-				cardScript.AttackText.text = string.Empty;
-				cardScript.AttackIcon.sprite = TransparentSprite;
-			}
-			if(card.Health != -1) {
-				cardScript.HealthText.text = card.Health.ToString();
-			} else {
-				cardScript.HealthText.text = string.Empty;
-				cardScript.HealthIcon.sprite = TransparentSprite;
-			}
-			// Directions
-			cardScript.UpArrow.enabled = false;
-			cardScript.DownArrow.enabled = false;
-			cardScript.LeftArrow.enabled = false;
-			cardScript.RightArrow.enabled = false;
-			if(card.Directions.HasFlag(Directions.Up)) {
-				cardScript.UpArrow.enabled = true;
-			}
-			if(card.Directions.HasFlag(Directions.Down)) {
-				cardScript.DownArrow.enabled = true;
-			}
-			if(card.Directions.HasFlag(Directions.Left)) {
-				cardScript.LeftArrow.enabled = true;
-			}
-			if(card.Directions.HasFlag(Directions.Right)) {
-				cardScript.RightArrow.enabled = true;
-			}
+			Utility.Instance.ApplyCardInfoToCardObject(card, cardScript);
 		}
 	}
+	
+
+	
 }

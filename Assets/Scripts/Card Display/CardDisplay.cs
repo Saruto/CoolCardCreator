@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -63,8 +63,7 @@ public class CardDisplay : MonoBehaviour {
         for (int i = 0; i < length; i++)
         {
             // Show the cards with their offset, incase we've pressed the arrows
-            CardImages[i].transform.GetChild(0).GetComponent<Text>().text = parser.AllCards[i + offset].CardName;
-
+			Utility.Instance.ApplyCardInfoToCardObject(parser.AllCards[i + offset], CardImages[i].GetComponent<CardScript>());
         }
     }
 

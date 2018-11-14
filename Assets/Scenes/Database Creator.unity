@@ -2214,15 +2214,6 @@ MonoBehaviour:
   CardContainerPrefab: {fileID: 1499222121904230, guid: 8818aa48651d4334cbc3586e4c710524,
     type: 2}
   CardPrefab: {fileID: 1224819131253906, guid: b13c75c2448b31345a3e2dd858216dd9, type: 2}
-  ManaSymbolPrefab: {fileID: 1467112865960074, guid: 8acf6a0279bf3904f9967f6fc27a49ac,
-    type: 2}
-  PurpleSymbol: {fileID: 21300000, guid: 0c4f09e22f256334fa75c2861c5b6b2c, type: 3}
-  RedSymbol: {fileID: 21300000, guid: 9b6a397e59419ac44af16b52caf7b768, type: 3}
-  GraySymbol: {fileID: 21300000, guid: 57c9b0d0a08895348ad64ba1a2b72448, type: 3}
-  GreenSymbol: {fileID: 21300000, guid: e817705e9c22db143aa4915ea9eb3207, type: 3}
-  YellowSymbol: {fileID: 21300000, guid: 86257fedb3a829a46ae42cda13731b06, type: 3}
-  NeutralSymbol: {fileID: 21300000, guid: 59f202fe5d83b5d4d8e8f8e7dbeb0ad6, type: 3}
-  TransparentSprite: {fileID: 21300000, guid: 4ee7eecfe4cb9cf40b20346a856ef43c, type: 3}
 --- !u!114 &1300400055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2236,6 +2227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeckRendererCanvas: {fileID: 714202619}
   DeckRendererCamera: {fileID: 1539519519}
+  SaveDeckLocation: 0
 --- !u!114 &1300400056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3264,6 +3256,48 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1688782618}
   m_CullTransparentMesh: 0
+--- !u!1001 &1913637891
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4643653129845308, guid: e35e07d6813795046842741e1ac3a67b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643653129845308, guid: e35e07d6813795046842741e1ac3a67b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643653129845308, guid: e35e07d6813795046842741e1ac3a67b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643653129845308, guid: e35e07d6813795046842741e1ac3a67b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643653129845308, guid: e35e07d6813795046842741e1ac3a67b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643653129845308, guid: e35e07d6813795046842741e1ac3a67b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643653129845308, guid: e35e07d6813795046842741e1ac3a67b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643653129845308, guid: e35e07d6813795046842741e1ac3a67b, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e35e07d6813795046842741e1ac3a67b, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1944755844
 GameObject:
   m_ObjectHideFlags: 0
