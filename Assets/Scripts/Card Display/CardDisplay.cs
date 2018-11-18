@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
+
 public class CardDisplay : MonoBehaviour {
 
     CSVParser parser;
@@ -20,7 +21,7 @@ public class CardDisplay : MonoBehaviour {
 
     // Used for tracking the offset of cards, for displaying the cards in the card display. Offset by values of 8
     int offset = 0;
-    // Used for the offset value
+    // This is equal to the number of card images that appear on the screen, 8 by default, but can be changed later
     const int OFFSET_VALUE = 8;
 
 	// Use this for initialization
@@ -34,6 +35,7 @@ public class CardDisplay : MonoBehaviour {
         {
             CardImages[i] = transform.GetChild(i).gameObject;
         }
+
         ResetCardList();
         // Display the card names
         UpdateCards();
@@ -43,7 +45,8 @@ public class CardDisplay : MonoBehaviour {
 	void Update () {
 	}
 
-    // Clear and repopulate the list
+    // Clear and repopulate the list this happens whenever a search box is cleared,
+    // or a manacost button is unchecked
     void ResetCardList()
     {
         SearchedCards.Clear();
@@ -51,13 +54,16 @@ public class CardDisplay : MonoBehaviour {
         {
             SearchedCards.Add(parser.AllCards[i]);
         }
+        UpdateCards();
     }
 
+    // This updates the visuals of the cards.
+    // This function is important when you press the left or right buttons,
+    // and when you do anything that narrows the list of cards
     void UpdateCards()
     {
         int length;
 
-        // If the count is 
         if(SearchedCards.Count < offset + OFFSET_VALUE)
         {
             
@@ -78,6 +84,10 @@ public class CardDisplay : MonoBehaviour {
         GenerateCardImages(length);
     }
 
+    // This grabs how the cards should look (mana cost, name etc) and
+    // generates that on the cards, including their offset
+    // The length variable is primarily for when a page has less cards than the expected offset
+    // i.e. if the offset is 8, we need to disable some cards when there's only 7 to display
     void GenerateCardImages(int length)
     {
         for (int i = 0; i < length; i++)
@@ -87,6 +97,8 @@ public class CardDisplay : MonoBehaviour {
         }
     }
 
+    // This function moves all the cards forwards, obviously moving the offset forwards as well.
+    // This will not move once there are no more cards to offset
     public void CardsForwards()
     {
         // Only add to the offset if it wont make it bigger than our card list
@@ -98,6 +110,8 @@ public class CardDisplay : MonoBehaviour {
         UpdateCards();
     }
 
+    // This function moves the cards back, as well as changing the offset back.
+    // This function will not go below zero
     public void CardsBackwards()
     {
         // Make sure we don't make the offset less than zero
@@ -113,6 +127,8 @@ public class CardDisplay : MonoBehaviour {
 
     }
 
+    // Handles adding cards to your deck, it passes a card into the deck display, which
+    // is a list that stores the cards actually in the deck
     public void AddToDeck()
     {
         int index = -1;
@@ -131,32 +147,53 @@ public class CardDisplay : MonoBehaviour {
         }
     }
 
+    // Function that handles the search bar
     public void ValueChangeCheck()
     {
-        if(SearchBox.GetComponent<InputField>().text == "")
+        ResetCardList();
+        // When the search bar is empty, we need to reset the card list completely and 
+        if (SearchBox.GetComponent<InputField>().text == "")
         {
-            ResetCardList();
             UpdateCards();
         }
         else
         {
-            ResetCardList();
-            RemoveCardsFromList(SearchBox.GetComponent<InputField>().text);
+            RemoveBySearch(SearchBox.GetComponent<InputField>().text);
         }
     }
 
-    void RemoveCardsFromList(string typedValue)
+    // Create a list of the cards that start with a certain string,
+    // then remove those cards from the searched cards list
+    void RemoveBySearch(string typedValue)
+    {
+        List<Card> removeCards = new List<Card>();
+        for (int i = 0; i < parser.AllCards.Length; i++)
+        {
+            // Loop through all the cards, if the cards start with that string
+            // then add them to the remove cards list
+            string cardname = parser.AllCards[i].CardName.ToLower();
+            if (!cardname.StartsWith(typedValue.ToLower()))
+            {
+                removeCards.Add(parser.AllCards[i]);
+            }
+        }
+        // Call the remove cards function
+        RemoveCardsFromList(removeCards);
+    }
+
+    // Remove cards from the searched cards list so that we
+    // can refine our searches
+    void RemoveCardsFromList(List<Card> cardsToRemove)
     {
         // Reset the offset when removing cards
         offset = 0;
-        foreach(Card card in SearchedCards.ToArray())
+        for (int i = 0; i < cardsToRemove.Count; i++)
         {
-            string cardname = card.CardName.ToLower();
-            if (!cardname.StartsWith(typedValue.ToLower()))
-            {
-                SearchedCards.Remove(card);
-            }
+            // Remove all the cards in the cards to remove list
+            SearchedCards.Remove(cardsToRemove[i]);
         }
         UpdateCards();
     }
+
+    
 }
