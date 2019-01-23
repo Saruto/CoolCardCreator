@@ -34,7 +34,7 @@ public class PlayersHand : MonoBehaviour {
 	// Respaces the cards in hand based on the number of them in the hand.
 	void RespaceCards() {
 		int numChildren = transform.childCount;
-
+		 
 
 		// update layout
 		LayoutRebuilder.MarkLayoutForRebuild(GetComponent<RectTransform>());
