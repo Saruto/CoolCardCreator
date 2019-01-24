@@ -157,56 +157,52 @@ public class RadialLayout : LayoutGroup {
             childList.Add (child);
             activeChildCount++;
         }
- 
-        m_Tracker.Clear ();
+        m_Tracker.Clear();
         if (activeChildCount == 0) {
             return;
         }
- 
+
+		// Set maxAngle and startAngle based on the number of children (cards).
+		if(activeChildCount >= 5) {
+			maxAngle = 40;
+		} else {
+			maxAngle = (activeChildCount - 1f) * 10f;
+		}
+		startAngle = 90 + maxAngle / 2f;
+
         rectTransform.sizeDelta = new Vector2 (radius, radius) * 2f;
         float sAngle = ((360f) / activeChildCount) * (activeChildCount - 1f);
- 
         float anglOffset = minAngle;
         if (anglOffset > sAngle) {
             anglOffset = sAngle;
         }
- 
-        float buff = sAngle - anglOffset;
- 
-        float maxAngl = 360f - maxAngle;
-        if (maxAngl > sAngle) {
-            maxAngl = sAngle;
-        }
- 
-        if (anglOffset > sAngle) {
-            anglOffset = sAngle;
-        }
- 
-        buff = sAngle - anglOffset;
- 
-        //float fOffsetAngle = ((buff - maxAngl)) / (activeChildCount - 1f);
+  
+		// Set the amount of space between the children, as well as the starting angle.
 		float fOffsetAngle = maxAngle / (activeChildCount - 1f);
         float fAngle = startAngle + anglOffset;
  
+		// Set the rotation as a driven property.
         DrivenTransformProperties drivenTransformProperties = DrivenTransformProperties.Anchors | DrivenTransformProperties.AnchoredPosition | DrivenTransformProperties.Pivot;
-        if (rotateElements) {
+        if(rotateElements) {
             drivenTransformProperties |= DrivenTransformProperties.Rotation;
         }
- 
-        if (clockwise) {
+		
+		// Alter direction for clockwise rotations
+        if(clockwise) {
             fOffsetAngle *= -1f;
         }
- 
+		
+		// Set positions for all children.
         for (int i = 0; i < childList.Count; i++) {
             RectTransform child = childList[i]; 
             if (child != null && child.gameObject.activeSelf) {
-                //Adding the elements to the tracker stops the user from modifiying their positions via the editor.
+                // Adding the elements to the tracker stops the user from modifiying their positions via the editor.
                 m_Tracker.Add (this, child, drivenTransformProperties);
                 Vector3 vPos = new Vector3 (Mathf.Cos (fAngle * Mathf.Deg2Rad), Mathf.Sin (fAngle * Mathf.Deg2Rad), 0);
                 child.localPosition = vPos * radius;
-                //Force objects to be center aligned, this can be changed however I'd suggest you keep all of the objects with the same anchor points.
+                // Force objects to be center aligned, this can be changed however I'd suggest you keep all of the objects with the same anchor points.
                 child.anchorMin = child.anchorMax = child.pivot = new Vector2 (0.5f, 0.5f);
- 
+				// Rotate children 
                 float elementAngle = startElementAngle;
                 if (rotateElements) {
                     elementAngle += fAngle;

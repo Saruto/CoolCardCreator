@@ -292,6 +292,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Card Template (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1546608341721177911, guid: e6a4f1738aad38343b7093379d0c4f5c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1615699490646520731, guid: e6a4f1738aad38343b7093379d0c4f5c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -582,6 +587,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Card Template (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1546608341721177911, guid: e6a4f1738aad38343b7093379d0c4f5c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1615699490646520731, guid: e6a4f1738aad38343b7093379d0c4f5c,
         type: 3}
@@ -910,10 +920,10 @@ MonoBehaviour:
   radius: 1600
   clockwise: 1
   minAngle: 0
-  maxAngle: 31
-  startAngle: 106
+  maxAngle: 40
+  startAngle: 110
   customRebuild: 0
-  startElementAngle: 271
+  startElementAngle: 270
   rotateElements: 1
 --- !u!222 &1441615383
 CanvasRenderer:
@@ -946,6 +956,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Card Template (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1546608341721177911, guid: e6a4f1738aad38343b7093379d0c4f5c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1615699490646520731, guid: e6a4f1738aad38343b7093379d0c4f5c,
         type: 3}
@@ -1304,6 +1319,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Card Template (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1546608341721177911, guid: e6a4f1738aad38343b7093379d0c4f5c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1615699490646520731, guid: e6a4f1738aad38343b7093379d0c4f5c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1496,6 +1516,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Card Template
+      objectReference: {fileID: 0}
+    - target: {fileID: 1546608341721177911, guid: e6a4f1738aad38343b7093379d0c4f5c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1615699490646520731, guid: e6a4f1738aad38343b7093379d0c4f5c,
         type: 3}

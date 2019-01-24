@@ -37,6 +37,6 @@ public class PlayersHand : MonoBehaviour {
 		 
 
 		// update layout
-		LayoutRebuilder.MarkLayoutForRebuild(GetComponent<RectTransform>());
+		//LayoutRebuilder.MarkLayoutForRebuild(GetComponent<RectTransform>());
 	}
 }
