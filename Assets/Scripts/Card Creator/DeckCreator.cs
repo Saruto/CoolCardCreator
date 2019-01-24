@@ -14,22 +14,22 @@ public class DeckCreator : MonoBehaviour {
 	CSVParser Parser;
 
 	// The canvas used for rendering the decks.
-	[SerializeField] GameObject DeckRendererCanvas;
+	[SerializeField] GameObject DeckRendererCanvas = null;
 
 	// The decklist text input field and the deck's name.
-	[SerializeField] Text DeckName;
-	[SerializeField] Text DeckList;
+	[SerializeField] Text DeckName = null;
+	[SerializeField] Text DeckList = null;
 
 	// The deck color picker options and the current color selected.
-	[SerializeField] Image[] DeckColorOptions;
+	[SerializeField] Image[] DeckColorOptions = null;
 	int CurrentlySelectedColor = -1;
 
 
 	// Container for all of the cards.
-	[SerializeField] GameObject CardContainerPrefab;
+	[SerializeField] GameObject CardContainerPrefab = null;
 
 	// A prefab to use for creating the cards of.
-	[SerializeField] GameObject CardPrefab;
+	[SerializeField] GameObject CardPrefab = null;
 
 	
 	

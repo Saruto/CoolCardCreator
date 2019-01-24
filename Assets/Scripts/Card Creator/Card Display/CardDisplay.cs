@@ -10,9 +10,9 @@ public class CardDisplay : MonoBehaviour {
     CSVParser parser;
 
     // Used for displaying the deck
-    [SerializeField] GameObject deckDisplay;
+    [SerializeField] GameObject deckDisplay = null;
 
-    [SerializeField] GameObject SearchBox;
+    [SerializeField] GameObject SearchBox = null;
 
     // Used for searching, and narrowing down cards
     List<Card> SearchedCards = new List<Card>();

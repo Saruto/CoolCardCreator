@@ -8,14 +8,14 @@ using UnityEngine;
 // Handles the creation and saving of deck images.
 public class DeckImageCreator : MonoBehaviour {
 	// The canvas used for rendering the decks.
-	[SerializeField] GameObject DeckRendererCanvas;
+	[SerializeField] GameObject DeckRendererCanvas = null;
 
 	// The camera that's currently rendering the deck.
-	[SerializeField] Camera DeckRendererCamera;
+	[SerializeField] Camera DeckRendererCamera = null;
 
 	// Should we save to the Project folder path? Or to the AppData folder?
 	enum SaveLocation { ProjectFolder, AppDataFolder }
-	[SerializeField] SaveLocation SaveDeckLocation;
+	[SerializeField] SaveLocation SaveDeckLocation = SaveLocation.ProjectFolder;
 
 	// The root folder containing all decks.
 	static string DIRECTORY_PATH;

@@ -9,19 +9,19 @@ public class Utility : MonoBehaviour {
 
 	// Seralized Fields
 	// Prefab for a mana symbol
-	[SerializeField] GameObject ManaSymbolPrefab;
+	[SerializeField] GameObject ManaSymbolPrefab = null;
 
 	// Prefabs for every mana symbol sprite
-	[SerializeField] Sprite PurpleSymbol;
-	[SerializeField] Sprite RedSymbol;
-	[SerializeField] Sprite GraySymbol;
-	[SerializeField] Sprite GreenSymbol;
-	[SerializeField] Sprite YellowSymbol;
-	[SerializeField] Sprite NeutralSymbol;
+	[SerializeField] Sprite PurpleSymbol = null;
+	[SerializeField] Sprite RedSymbol = null;
+	[SerializeField] Sprite GraySymbol = null;
+	[SerializeField] Sprite GreenSymbol = null;
+	[SerializeField] Sprite YellowSymbol = null;
+	[SerializeField] Sprite NeutralSymbol = null;
 	// Other Sprites
-	[SerializeField] Sprite AttackIconSprite;
-	[SerializeField] Sprite HealthIconSprite;
-	[SerializeField] Sprite TransparentSprite;
+	[SerializeField] Sprite AttackIconSprite = null;
+	[SerializeField] Sprite HealthIconSprite = null;
+	[SerializeField] Sprite TransparentSprite = null;
 
 
 	// Singleton instance

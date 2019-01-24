@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,7 +10,7 @@ public class DeckDisplay : MonoBehaviour {
 
     // Make a list that stores the deck
     List<Card> deckList = new List<Card>();
-    [SerializeField] GameObject cardDeckImage;
+    [SerializeField] GameObject cardDeckImage = null;
 
 	// Use this for initialization
 	void Start () {

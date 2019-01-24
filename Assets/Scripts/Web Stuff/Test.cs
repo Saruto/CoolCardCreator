@@ -13,9 +13,9 @@ public class Test : MonoBehaviour {
 
 	// Request Class
 	class PlayerInitResponse {
-		public int id;
-		public string secret;
-		public string name;
+		public int id = 0;
+		public string secret = string.Empty;
+		public string name = string.Empty;
 	}
 
 	// ----------------------------------------- Fields and Properties ----------------------------------------- //	
