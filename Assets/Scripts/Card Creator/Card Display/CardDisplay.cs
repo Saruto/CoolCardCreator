@@ -6,9 +6,6 @@ using UnityEngine.EventSystems;
 
 
 public class CardDisplay : MonoBehaviour {
-
-    CSVParser parser;
-
     // Used for displaying the deck
     [SerializeField] GameObject deckDisplay = null;
 
@@ -26,10 +23,6 @@ public class CardDisplay : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        // Find the parser to get access to the card list
-        // Also eventual stop using .Find lol
-        parser = GameObject.Find("Parser").GetComponent<CSVParser>();
-
         // Find each card image, and set them equal to the children of the card grid
         for (int i = 0; i < CardImages.Length; i++)
         {
@@ -50,9 +43,9 @@ public class CardDisplay : MonoBehaviour {
     void ResetCardList()
     {
         SearchedCards.Clear();
-        for (int i = 0; i < parser.AllCards.Length; i++)
+        for (int i = 0; i < CardDatabase.Instance.AllCards.Length; i++)
         {
-            SearchedCards.Add(parser.AllCards[i]);
+            SearchedCards.Add(CardDatabase.Instance.AllCards[i]);
         }
         UpdateCards();
     }
@@ -167,14 +160,14 @@ public class CardDisplay : MonoBehaviour {
     void RemoveBySearch(string typedValue)
     {
         List<Card> removeCards = new List<Card>();
-        for (int i = 0; i < parser.AllCards.Length; i++)
+        for (int i = 0; i < CardDatabase.Instance.AllCards.Length; i++)
         {
             // Loop through all the cards, if the cards start with that string
             // then add them to the remove cards list
-            string cardname = parser.AllCards[i].CardName.ToLower();
+            string cardname = CardDatabase.Instance.AllCards[i].CardName.ToLower();
             if (!cardname.StartsWith(typedValue.ToLower()))
             {
-                removeCards.Add(parser.AllCards[i]);
+                removeCards.Add(CardDatabase.Instance.AllCards[i]);
             }
         }
         // Call the remove cards function

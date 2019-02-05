@@ -7,12 +7,13 @@ using UnityEngine;
 using FileHelpers;
 
 // Handles reading data from the CSV and turning it into Card Structs.
-public class CSVParser : MonoBehaviour {
+public class CardDatabase : Singleton<CardDatabase> {
 	// All of the cards parsed from the CSV
 	public Card[] AllCards { get; private set; }
 
 	// --- Start --- //
-	void Awake() {
+	protected override void Awake() {
+		base.Awake();
 		OnParseCSV();
 	}
 

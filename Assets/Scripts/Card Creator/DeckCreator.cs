@@ -10,9 +10,6 @@ using UnityEngine.UI;
 // Main Script, handles UI and input, as well as deck creation.
 public class DeckCreator : MonoBehaviour {
 	// ----------------------------------------- Fields and Properties ----------------------------------------- //	
-	// The CSV Parser
-	CSVParser Parser;
-
 	// The canvas used for rendering the decks.
 	[SerializeField] GameObject DeckRendererCanvas = null;
 
@@ -51,7 +48,6 @@ public class DeckCreator : MonoBehaviour {
 
 	// --- Start --- //
 	void Start() {
-		Parser = GetComponent<CSVParser>();
 		OnDeckColorPress(0);
 	}
 
@@ -67,7 +63,7 @@ public class DeckCreator : MonoBehaviour {
 			string[] numberCardNamePair = row.Split(new char[]{ ' ' }, 2);
 			int number = Convert.ToInt32(numberCardNamePair[0]);
 			// Search the AllCards list for the card name
-			Card card = Array.Find(Parser.AllCards, (c) => c.CardName == numberCardNamePair[1]);
+			Card card = Array.Find(CardDatabase.Instance.AllCards, (c) => c.CardName == numberCardNamePair[1]);
 			if(card.CardName != numberCardNamePair[1]) {
 				Debug.LogWarning("Card not found in the Card Database! Card Name: " + numberCardNamePair[1]);
 			}
@@ -83,7 +79,7 @@ public class DeckCreator : MonoBehaviour {
 
 	// Simply makes a deck with every single card in the database represented once.
 	public void OnMakeAllCards() {
-		MakeDeck(Parser.AllCards, "All Cards");
+		MakeDeck(CardDatabase.Instance.AllCards, "All Cards");
 		print("Created all card gameobjects!");
 	}
 

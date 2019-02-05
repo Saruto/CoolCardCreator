@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class ClickandDrag : MonoBehaviour
 {
-    bool IsDragging;
+	public GameObject CardObjectPrefab;
+
+	bool IsDragging;
 
     // Start is called before the first frame update
     void Start()
@@ -27,21 +29,22 @@ public class ClickandDrag : MonoBehaviour
     {
 		if(IsDragging) 
 		{
-			IsDragging = false;
 			RaycastHit hit;
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			bool didHit = Physics.Raycast(ray, out hit);
+			Square squareScript = didHit ? hit.transform.GetComponent<Square>() : null;
 			// Place card on valid spot
-			if(didHit && hit.transform.GetComponent<Square>() != null && hit.transform.GetComponent<Square>().canPlace()) 
+			if(didHit && squareScript != null && squareScript.canPlace()) 
 			{
-				
-				
+				GameObject cardObj = Instantiate(CardObjectPrefab);
+				cardObj.transform.SetParent(squareScript.transform);
+				cardObj.transform.localPosition = new Vector3(0, 0.55f, 0);
+				cardObj.GetComponentInChildren<CardScript>().UpdateCardVisuals(transform.GetComponent<CardScript>().card);
+				Destroy(gameObject);
 			} 
-			// Return card to hand.
-			else 
-			{
-				LayoutRebuilder.MarkLayoutForRebuild(transform.parent.GetComponent<RectTransform>());
-			}
+			// Remake the hand and make it no longer dragging.
+			LayoutRebuilder.MarkLayoutForRebuild(transform.parent.GetComponent<RectTransform>());
+			IsDragging = false;
 		}
 		else 
 		{

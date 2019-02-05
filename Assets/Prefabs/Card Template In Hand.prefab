@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1517420178012071923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546608341721177911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dd13d60f97ed854685c1e45b195efa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CardObjectPrefab: {fileID: 3630483594125592695, guid: e043f6b14871767498451b1d84d89ba9,
+    type: 3}
 --- !u!114 &5178847777478910858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39,21 +53,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1517420178012071923}
+        m_MethodName: Drag
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &1517420178012071923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1546608341721177911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dd13d60f97ed854685c1e45b195efa7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1545563569801255845
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -280,6 +293,11 @@ PrefabInstance:
       propertyPath: LandLayout
       value: 
       objectReference: {fileID: 1545892885513476589}
+    - target: {fileID: 114039003208730984, guid: b13c75c2448b31345a3e2dd858216dd9,
+        type: 3}
+      propertyPath: m_Text
+      value: Card Name
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b13c75c2448b31345a3e2dd858216dd9, type: 3}
 --- !u!1 &1546608341721177911 stripped

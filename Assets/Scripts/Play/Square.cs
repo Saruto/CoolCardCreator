@@ -5,7 +5,6 @@ using UnityEngine;
 public class Square : MonoBehaviour
 {
 
-
 	public bool isActive { get; private set; } = true;
  	
 	// Start is called before the first frame update

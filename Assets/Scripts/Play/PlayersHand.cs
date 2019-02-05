@@ -8,35 +8,28 @@ using UnityEngine.UI;
 public class PlayersHand : MonoBehaviour {
 	// --- Fields and Properties --- //
 
-	// The horizontal layout group component attached to this GO
-	HorizontalLayoutGroup hLayoutGroup;
+	// The Radial Layout
+	RadialLayout layoutGroup;
 	
 
 	// Seralized Fields
-	[SerializeField] 
+	[SerializeField] GameObject CardInHandTemplate = null;
 
 	
 	// --- Methods --- //
     // Start
     void Start() {
-        hLayoutGroup = GetComponent<HorizontalLayoutGroup>();
+        layoutGroup = GetComponent<RadialLayout>();
+		// Fills the players hand with random cards.
+		for(int i = 0; i < 7; i++) {
+			GameObject card = Instantiate(CardInHandTemplate, transform);
+			card.GetComponent<CardScript>().UpdateCardVisuals(CardDatabase.Instance.AllCards[Random.Range(0, CardDatabase.Instance.AllCards.Length)]);
+		}
     }
 
 
     // Update
     void Update() {
-        // TODO: Should only need to do this once we detect a change in the hand size.
-		RespaceCards();
-    }
-
-	
-	
-	// Respaces the cards in hand based on the number of them in the hand.
-	void RespaceCards() {
-		int numChildren = transform.childCount;
-		 
-
-		// update layout
-		//LayoutRebuilder.MarkLayoutForRebuild(GetComponent<RectTransform>());
+		
 	}
 }
