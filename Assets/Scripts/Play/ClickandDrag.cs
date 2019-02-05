@@ -1,6 +1,7 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ClickandDrag : MonoBehaviour
 {
@@ -24,6 +25,28 @@ public class ClickandDrag : MonoBehaviour
     // Function that the button calls which allows us to drag the UI object around
     public void Drag()
     {
-        IsDragging = !IsDragging;
+		if(IsDragging) 
+		{
+			IsDragging = false;
+			RaycastHit hit;
+			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+			bool didHit = Physics.Raycast(ray, out hit);
+			// Place card on valid spot
+			if(didHit && hit.transform.GetComponent<Square>() != null && hit.transform.GetComponent<Square>().canPlace()) 
+			{
+				
+				
+			} 
+			// Return card to hand.
+			else 
+			{
+				LayoutRebuilder.MarkLayoutForRebuild(transform.parent.GetComponent<RectTransform>());
+			}
+		}
+		else 
+		{
+			IsDragging = true;
+			transform.rotation = Quaternion.identity;
+		}		
     }
 }
