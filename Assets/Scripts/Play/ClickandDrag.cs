@@ -29,7 +29,6 @@ public class ClickandDrag : MonoBehaviour
     {
 		if(IsDragging) 
 		{
-			print("bye");
 			RaycastHit hit;
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			bool didHit = Physics.Raycast(ray, out hit);
@@ -46,10 +45,12 @@ public class ClickandDrag : MonoBehaviour
 			// Remake the hand and make it no longer dragging.
 			GetComponent<LayoutElement>().ignoreLayout = false;
 			IsDragging = false;
+			PlayerInput.Instance.isDraggingCard = false;
 		}
-		else 
+		else if(!PlayerInput.Instance.isDraggingCard)
 		{
 			IsDragging = true;
+			PlayerInput.Instance.isDraggingCard = true;
 			transform.rotation = Quaternion.identity;
 			GetComponent<LayoutElement>().ignoreLayout = true;
 		}		

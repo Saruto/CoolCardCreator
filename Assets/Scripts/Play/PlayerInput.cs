@@ -6,9 +6,12 @@ using UnityEngine.EventSystems;
 
 // A high level script that manages some player input functions.
 // Also provides services to component scripts in the scene, allowing them to interact with other components.
-public class PlayerInput : MonoBehaviour {
+public class PlayerInput : Singleton<PlayerInput> {
 	// --- Fields and Properties --- //
 
+	// Is the player currently dragging a card around?
+	// Called and looked at by the scripts on the cards.
+	public bool isDraggingCard { get; set; }
 
 	// Seralized Fields
 	// The zoomed in card. 
