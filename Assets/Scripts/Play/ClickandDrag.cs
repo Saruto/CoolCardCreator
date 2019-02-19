@@ -36,10 +36,14 @@ public class ClickandDrag : MonoBehaviour
 			// Place card on valid spot
 			if(didHit && squareScript != null && squareScript.canPlace()) 
 			{
-				GameObject cardObj = Instantiate(CardObjectPrefab);
+				//GameObject cardObj = Instantiate(CardObjectPrefab);
+				GameObject cardObj = Instantiate(Resources.Load("Cards/" + GetComponent<CardScript>().card.CardName) as GameObject);
 				cardObj.transform.SetParent(squareScript.transform);
 				cardObj.transform.localPosition = new Vector3(0, 0.55f, 0);
 				cardObj.GetComponentInChildren<CardScript>().UpdateCardVisuals(transform.GetComponent<CardScript>().card);
+
+				cardObj.GetComponent<UnitCard>().OnPlayed();
+
 				Destroy(gameObject);
 			} 
 			// Remake the hand and make it no longer dragging.

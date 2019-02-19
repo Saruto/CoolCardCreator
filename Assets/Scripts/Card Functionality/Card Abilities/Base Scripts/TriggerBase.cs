@@ -7,7 +7,7 @@ using UnityEngine;
 public abstract class TriggerBase : MonoBehaviour {
 
 	// The script to run when the trigger has occured.
-    [SerializeField] EffectInputBase effectInputScript;
+    [SerializeField] protected EffectInputBase effectInputScript;
 
 	// Subscribes the function. Different depending on which trigger we're subscribing too.
 	abstract protected void Subscribe();

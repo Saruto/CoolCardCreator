@@ -23,7 +23,7 @@ public class PlayersHand : MonoBehaviour {
 		// Fills the players hand with random cards.
 		for(int i = 0; i < 7; i++) {
 			GameObject card = Instantiate(CardInHandTemplate, transform);
-			card.GetComponent<CardScript>().UpdateCardVisuals(CardDatabase.Instance.AllCards[Random.Range(0, CardDatabase.Instance.AllCards.Length)]);
+			card.GetComponent<CardScript>().UpdateCardVisuals(CardDatabase.Instance.AllCards[61]);
 		}
     }
 

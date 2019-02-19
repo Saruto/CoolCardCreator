@@ -15,7 +15,7 @@ public class PlayerInput : Singleton<PlayerInput> {
 
 	// Seralized Fields
 	// The zoomed in card. 
-	[SerializeField] CardScript HighlightDisplay;
+	[SerializeField] CardScript HighlightDisplay = null;
 
 
 	// --- Methods --- //
