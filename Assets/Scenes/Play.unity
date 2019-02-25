@@ -1050,11 +1050,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mad Lad
       objectReference: {fileID: 0}
-    - target: {fileID: 7932780913294013422, guid: 4ec1857550e43b841bb27f82f3db4972,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2012508496482488745, guid: 4ec1857550e43b841bb27f82f3db4972,
         type: 3}
       propertyPath: m_LocalPosition.x
