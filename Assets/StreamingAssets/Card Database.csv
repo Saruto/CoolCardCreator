@@ -88,6 +88,7 @@ Firesprayer,R3,R,Unit,Swiftness. Whenever this unit kills another target it may 
 Rally Man,RR1,R,Unit,Creatures you control have swiftness,2,2,u/r,Rare
 Fist to Face,R,P,Spell,"Pressure.
 Deal 1 damage.",,,,Common
+Chainsaw Hands,RRR,R,Spell,"Target creature deals damage in it's attack directions, then rotate that creature 90 degrees and it attacks again.",,,,Uncommon
 ,,,,,,,,
 [Gray],,,,,,,,
 Murder,AA1,G,Spell,Destroy a unit.,,,,Common
@@ -195,3 +196,5 @@ Congegration of Power,AG2,A,Spell,Shift all of your units upwards. Then shift th
 Units you don't control gain -1/-1.
 Whenever a unit you control dies, draw a card and lose 2 life.",4,4,,Mythic
 Aetherman,PA4,P,Unit,Pay PB and Exhaust: Move aetherman to target spot on the board. Pay P aetherman attacks L/R. Pay A: aetherman attacks U/D,6,6,l/r,Mythic
+Obituary Writer,GY2,G,Unit,"Whenever a unit you control dies, instead add it to your infulence pile.",1,4,d,Common
+Sly Striker,AY2,Y,Unit,Damage dealt to this creature is assigned to the nearest friendly creature instead. (If you control no other creatures this doesn’t happen),4,1,l/u,Uncommon
